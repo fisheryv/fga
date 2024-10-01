@@ -1,0 +1,63 @@
+% !TeX root = ../../fga.tex
+\section{The two existence theorems}\label{fga3.ii-b}
+
+
+Keeping the notation of \Cref{fga3.ii-a.5}, and, given a covariant functor
+\[
+F\colon \mathcal{C} \to \mathtt{Set},
+\]
+we wish to find manageable criteria for $F$ to be pro-representable, i.e. expressible via a $\Lambda$-algebra $O$ as above.
+By the corollary of §A, Proposition 3.1 \Cref{fga3.ii-a.3-proposition-3.1}, to ensure this, it is necessary and sufficient that $F$ be \emph{left exact}.
+In the current state of the technique of descent (cf. the questions asked in FGA 3.I, §A.2.c \Cref{fga3.i-a.2.c}), this criterion is not directly verifiable, in this form, in the most important cases, and we need criteria that seem less demanding.
+
+\begin{theorem}\label{fga3.ii-b-theorem-1}
+    For the functor $F$ to be pro-representable, it is necessary and sufficient that it satisfy the two following conditions:
+    \begin{enumerate}[i.]
+        \item $F$ commutes with finite products;
+        \item for every algebra $A\in\mathcal{C}$ and every homomorphism $A\to A'$ in $\mathcal{C}$ such that the diagram
+              \[
+              A \to A' \rightrightarrows A'\otimes_A A'
+              \]
+              is exact (cf. FGA 3.I, §A, Definition 1.2 \Cref{fga3.i-a.1-definition-1.2}), the diagram
+              \[
+              F(A) \to F(A') \rightrightarrows F(A'\otimes_A A')
+              \]
+              is also exact.
+    \end{enumerate}
+    Furthermore, it suffices to verify condition (ii) in the case where $A$ is local, and when, further, we are in one of the two following cases:
+    \begin{enumerate}[i.]
+        \item $A$ is a \emph{free} module over $A$;
+        \item the quotient module $A'/A$ is an $A$-module \emph{of length $1$}.
+    \end{enumerate}
+\end{theorem}
+
+
+\begin{cproof}
+    The proof of this theorem is rather delicate, and cannot be sketched here.
+    We content ourselves with pointing out that it relies essentially on a study of \emph{equivalence relations} (in the sense of categories) in \emph{the spectrum of an Artinian algebra} (the study of which poses even more problems, whose solutions seems essential for the further development of the theory).
+\end{cproof}
+
+
+In applications, the verification of condition (i) is always trivial.
+The verification of condition (ii) splits into two cases: case (a), where $A'$ is a free $A$-module, can be dealt with using the \emph{technique of descent by flat morphisms} (cf. FGA 1, Theorems 1, 2, and 3 \Cref{fga1-1}), which offers no difficulty;
+to deal with case (b), we will use the following result:
+
+
+\begin{theorem}\label{fga3.ii-b-theorem-2}
+Let $A$ be a local Artinian ring with maximal ideal $\mathfrak{m}$, and let $A'$ be an $A$-algebra containing $A$, and such that $\mathfrak{m}A'\subset A$, and $A\to A'\rightrightarrows A'\otimes_A A'$ is \emph{exact} (which is the case, in particular, if $A'/A$ is an $A$-module of length $1$).
+Let $\mathcal{F}$ be the fibred category (cf. FGA 3.I, §A, Definition 1.1 \Cref{fga3.i-a.1-definition-1.1}) of quasi-coherent sheaves that are flat over varying preschemes.
+Then the morphism $\operatorname{Spec}(A')\to\operatorname{Spec}(A)$ is a \emph{strict $\mathcal{F}$-descent morphism} (cf. FGA 3.I, §A, Definition 1.7 \Cref{fga3.i-a.1-definition-1.7}).
+\end{theorem}
+
+\begin{cproof}
+    We prove this by first proving that
+    \[
+        \operatorname{H}^i(A'/A,\operatorname{G_a}) = 0
+        \qquad\text{for }i\geqslant1
+    \]
+    (cf. FGA 3.I, §A.4.e \Cref{fga3.i-a.4.e}), with the hypothesis that $\mathfrak{m}A'\subset A$ allowing us to easily reduce to the case where $A$ is a field (namely $A/\mathfrak{m}$).
+    We can then apply the equivalences described in FGA 3.I, §A.4.e \Cref{fga3.i-a.4.e}.
+\end{cproof}
+
+
+In other words, the data of a flat $A$-module $M$ is completely equivalent to the data of a flat $A'$-module $M'$ endowed with an $(A'\otimes_A A')$-isomorphism from $M'\otimes_A A'$ to $A'\otimes_A M'$ satisfying the usual transitivity condition for a descent data (\emph{loc. cit.}).

@@ -1,0 +1,188 @@
+% !TeX root = ../../fga.tex
+\section{Bounded families and the Hilbert polynomial}\label{fga3.iv-2}
+
+
+
+  In the following, we assume that $X$ is projective over $S$, and endowed with a very ample sheaf, denoted by $\mathcal{O}_X(1)$.
+  For every extension $K$ of a residue extension $k(s)$ of a point $s$ of $S$, we consider the corresponding sheaf $\mathcal{O}_{X_K}(1)$ on $X_K$, which will again be very ample.
+
+  To each coherent sheaf $\mathcal{F}$ on $X_K$, we associate the function
+  \[
+    P_\mathcal{F}(n) = \text{the Euler–Poincaré characteristic of }\mathcal{F}(n)\text{ on }X_k
+  \]
+  which is a polynomial in the integer $n$, and called the \emph{Hilbert polynomial} of $\mathcal{F}$.
+  For large values of $n$, $P(n)$ is exactly the dimension of $\operatorname{H}^0(X_k,\mathcal{F}(n))$ over $K$, since the $\operatorname{H}^i(X_k,\mathcal{F}(n))$ are zero for $i>0$ and large enough $n$.
+
+  Now, if $\mathcal{F}$ is a coherent sheaf on $X$ which is \emph{flat} with respect to $S$, then the Hilbert polynomials of the sheaves $\mathcal{F}_S$ induced on the fibres $X_S$ (with respect to one single connected component of $S$) are all equal \cite{GD1960}, III, §7.
+  It thus follows (without any flatness hypothesis) that the set of Hilbert polynomials of the sheaves $\mathcal{F}_s$, for $s\in S$, is finite for every coherent sheaf $\mathcal{F}$ on $X$.
+
+  Recall also that, if $\mathcal{F}$ is a coherent sheaf on $X$, then it is isomorphic to a quotient sheaf of a sheaf of the form $\mathcal{O}_X(-n)^N$, for some large enough $n,N$.
+  So the sheaves $\mathcal{F}_s$ induced on the fibres are also quotients of the sheaf $\mathcal{O}(-n)$ on the fibre.
+
+  From these two remarks, we reduce the "necessary" part of the following theorem:
+
+\begin{theorem}\label{fga3.iv-2-theorem-2.1}
+  Let $X$ be projective over $S$, with $S$ Noetherian, and $\mathcal{O}_X(1)$ very ample over $X$ with respect to $S$.
+    Let $E$ be a set of classes of sheaves on the fibres of $X/S$.
+    For $E$ to be bounded, it is necessary and sufficient that it satisfy the following conditions:
+    \begin{enumerate}[label=\alph*.]
+      \item There exists a coherent sheaf $\mathcal{L}$ on $X$ (which we can suppose to be of the form $\mathcal{O}_X(-n)^N$) such that $E$ is contained in the family of classes of coherent sheaves given by quotients of sheaves of the form $\mathcal{L}_K$;
+      \item The Hilbert polynomials $P_\mathcal{F}$ of the sheaves $\mathcal{F}$ whose class is in $E$ are elements of a single \emph{finite} set of polynomials.
+    \end{enumerate}
+\end{theorem}
+
+  It remains to prove the "sufficient" part, which will be a particular case of a more precise result.
+  For every coherent module $\mathcal{F}$ on a prescheme of finite type over a field $K$, and for every integer $r$, let $N_r$ be the submodule of $\mathcal{F}$ whose sections over an open subset are the sections of $\mathcal{F}$ over the same subset whose support is of dimension $<r$.
+  We thus have that $N_r=\mathcal{F}$ for $r>\dim\operatorname{supp}\mathcal{F}$, and $N_r=0$ for $r\leqslant0$, and we thus obtain a finite increasing filtration of $\mathcal{F}$ whose factors $N_r/N_{r+1}$ are such that their associated prime cycles are exactly the associated prime cycles of $\mathcal{F}$ that are of dimension $r$.
+  We set
+  \[
+    \mathcal{F}_{(r)}
+    = \mathcal{F}/N_r
+  \]
+  so that the associated prime cycles of $\mathcal{F}_{(r)}$ are exactly the associated prime cycles of $\mathcal{F}$ that are of dimension $\geqslant r$, and, in particular, $\mathcal{F}_{(r)}$ is equal to $\mathcal{F}$ if and only if the associated prime cycles of $\mathcal{F}$ are of dimension $\geqslant r$.
+  With this, we have:
+
+  \begin{theorem}\label{fga3.iv-2-theorem-2.2}
+    Under the conditions of \Cref{fga3.iv-2-theorem-2.1}, let $s$ be an integer, and suppose that $E$ satisfies condition (a), as well as the following weakened form of (b):
+
+    \begin{enumerate}
+      \item[bs.] The Poincaré polynomials $P_\mathcal{F}$ of the sheaves $\mathcal{F}$ whose class is in $E$ have coefficients \emph{in degrees $\leqslant (s-1)$} that are bounded.
+    \end{enumerate}
+
+    Under these conditions, the sheaves $\mathcal{F}_{(s)}$ (for the $\mathcal{F}$ whose class is in $E$) form a bounded family.
+    Furthermore, the coefficients in degree $(s-2)$ of the $P_\mathcal{F}$ are bounded below.
+  \end{theorem}
+
+  Thus:
+
+  \begin{corollary}\label{fga3.iv-2-corollary-2.3}
+    Suppose that the sheaves $\mathcal{F}$ whose class is in $E$ are such that all their associated prime cycles are of dimension $d$, with $s\leqslant d\leqslant r$.
+    Then, in condition (b) of \Cref{fga3.iv-2-theorem-2.1}, we can restrict to the coefficients of $P_\mathcal{F}$ between degree $(s-1)$ and $r$, inclusive.
+  \end{corollary}
+
+  The end of this section is dedicated to a sketch proof of \Cref{fga3.iv-2-theorem-2.2}.
+  The key lemmas are the two following lemmas, of which the first is well known (and summarises the useful mathematical content of Chow coordinates):
+
+
+  \begin{lemma}\label{fga3.iv-2-lemma-2.4}
+    Consider the structure sheaves of the subschemes $Y$ with fibre $X_K$ (where $K$ is an algebraically closed extension of the residue field of $S$), where $Y$ is reduced, and all its components are of the same dimension $r$ (and with $\mathcal{O}_Y$ being thought of as a quotient sheaf of $\mathcal{O}_X$).
+    If the degrees of $Y$ are bounded, then the $Y$ form a bounded family.
+  \end{lemma}
+
+  Here, the degree $a$ of $Y$ can be most conveniently defined as the coefficient of the dominant term of $P_{\mathcal{O}_Y}=an^r/r!+\ldots$.
+
+
+  \begin{lemma}\label{fga3.iv-2-lemma-2.5}
+
+    Let $\mathcal{L}$ be a coherent sheaf on $X$, and $E$ a set of classes of the quotient sheaves $\mathcal{F}$ of the sheaf $\mathcal{L}_K$ (where $K$ is a residue extension of $S$).
+    Suppose that the fibres of $X$ over $S$ are of dimension $\leqslant r$, and set
+    \[
+      P_\mathcal{F}(n)
+      = a_\mathcal{F}n^r/r! + b_\mathcal{F}n^{r-1}/(r-1)! + \text{terms of degree }<r-1.
+    \]
+    Then the coefficient $a_\mathcal{F}$ is bounded (above), and $b_\mathcal{F}$ is bounded below.
+    If $b_\mathcal{F}$ is bounded, then the family $\mathcal{F}_{(r)}$ is bounded.
+  \end{lemma}
+
+  \begin{cproof}
+      By replacing $S$ by a union of subschemes of $S$ that cover $S$, we can suppose that there exists a \emph{finite} morphism $f\colon X\to\mathbb{P}_S^r$ such that $\mathcal{O}_X(1)$ is isomorphic to the inverse image of $\mathcal{O}_{\mathbb{P}_S^r}(1)$, and thus, for every coherent sheaf $\mathcal{F}$ on $X$, we have that $P_\mathcal{F}=P_{f_*(\mathcal{F})}$.
+      We can also easily show (by the technique of the previous section) that a set of sheaves $\mathcal{F}$ on $X$ is bounded if and only if the set of $f_*(\mathcal{F})$ is bounded.
+      Finally, we have that
+      \[
+        f_*(\mathcal{F})_{(r)}
+        = f_*(\mathcal{F}_{(r)}).
+      \]
+      This thus allows us to reduce to the case where $X=\mathbb{P}_S^r$.
+      Furthermore, we can suppose that $\mathcal{L}=\mathcal{O}_{\mathbb{P}_S^r}(k)^s$, for some suitable $k$ and $s$.
+      The coefficient $a_\mathcal{F}$ satisfies
+      \[
+        0\leqslant a_\mathcal{F} \leqslant s
+      \]
+      and is thus bounded.
+      With this in mind, saying that the $n^{r-1}$ coefficient $P_\mathcal{F}(n)$ is bounded below (resp. bounded) is equivalent to saying the same thing for the $P_\mathcal{F}(n-k)=P_{\mathcal{F}(-k)}(n)$.
+      This leads us to the case where
+     \[
+        \mathcal{L}
+        = \mathcal{O}_{\mathbb{P}_S^r}^s.
+      \]
+  
+      Consider the exact sequence
+      \[
+        0 \to N_r \to \mathcal{F} \to \mathcal{F}_{(r)} \to 0
+      \]
+      whence
+      \[
+        P_\mathcal{F}
+        = P_{\mathcal{F}_{(r)}} + P_{N_r}
+      \]
+      and, since the $n^{r-1}$ coefficient of $P_{N_r}$ is positive (since $\dim\operatorname{supp} N_r\leqslant r-1$), we have that
+      \[
+        b_{\mathcal{F}_{(r)}} \leqslant b_\mathcal{F}.
+      \]
+      This allows us, in proving the lemma, to replace $\mathcal{F}$ by $\mathcal{F}_{(r)}$, i.e. to suppose that the quotients $\mathcal{F}$ of $\mathcal{L}$ in question are torsion free.
+
+      Since $\mathbb{P}_K^r$ is normal, it follows that $\mathcal{F}$ is locally free of rank $a=a_\mathcal{F}$ on an open $U=\mathbb{P}_K^r\setminus Y$, where $Y$ is of codimension $\geqslant2$.
+      Thus $\bigwedge^a\mathcal{F}$ is a sheaf on $\mathbb{P}_K^r$ whose restriction to $U$ is invertible, and thus (since $\mathbb{P}_K^r$ is regular, and $Y$ is of codimension $\geqslant2$) isomorphism to the restriction of an invertible sheaf on $\mathbb{P}_K^r$, defined up to isomorphism.
+      This latter sheaf is of the form $\mathcal{O}_{\mathbb{P}_K^r}(d)$ for some well defined integer $d$.
+      Since $\bigwedge^a\mathcal{F}$ is a quotient of $\bigwedge^a\mathcal{O}_{\mathbb{P}_K^r}^n\simeq\mathcal{O}_{\mathbb{P}_K^r}^N$ with $N=\binom{n}{a}$, it admits $N$ canonical sections, which thus define sections of $\mathcal{O}_{\mathbb{P}_K^r}(d)$ over $U$, which are restrictions of sections $s_i$ (for $1\leqslant i\leqslant N$) of $\mathcal{O}_{\mathbb{P}_K^r}(d)$ (since $\mathbb{P}_K^r$ is normal, and $Y$ is of codimension $\geqslant2$).
+      These $s_i$ generate $\mathcal{O}_{\mathbb{P}_K^r}(d)$ at the points of $U$, and are thus not all zero, which implies that $d\geqslant0$.
+      An easy calculation also shows that
+      \[
+        b_\mathcal{F}
+        = a_\mathcal{F}(r+1)/2 + d.
+      \]
+      This shows, in particular, that $b_\mathcal{F}\geqslant0$, and so $b_\mathcal{F}$ is bounded below.
+      It is bounded if and only if $d$ is bounded;
+      we will show that $\mathcal{F}$ then remains in a bounded family.
+      We can fix $a_\mathcal{F}$ and $b_\mathcal{F}$, as well as $a$ and $b$ (and thus $d$).
+      The data of the $N$ sections $s_i$ of $\mathcal{O}_{\mathbb{P}_K^r}(d)$, i.e. of a homomorphism $s\colon\bigwedge^a\mathcal{L}_K\to\mathcal{O}_{\mathbb{P}_K^r}(d)$, allows us to recover $\mathcal{F}$ as the co-image of the corresponding composite homomorphism:
+      \[
+        \mathcal{L}_K
+        \to \mathcal{H}om\left( \bigwedge^{a-1}\mathcal{L}_{K'}, \bigwedge^a\mathcal{L}_K \right)
+        \to \mathcal{H}om\left( \bigwedge^{a-1}\mathcal{L}_{K'}, \mathcal{O}_{\mathbb{P}_K^r}(d) \right)
+      \]
+      where the first arrow is the canonical homomorphism coming from the exterior product, and the second comes from $s$.
+      We then conclude by part (i) of \Cref{fga3.iv-1-proposition-1.2}.
+  \end{cproof}
+
+
+  The combination of the two lemmas above allows us to prove the following:
+
+
+  \begin{lemma}\label{fga3.iv-2-lemma-2.6}
+    Suppose, under the preliminary conditions of \Cref{fga3.iv-2-theorem-2.1}, that, for all $\mathcal{F}$, we have
+    \[
+      P_\mathcal{F}(n)
+      = a_\mathcal{F} n^r/r! + b_\mathcal{F} n^{r-1}/(r-1)! + \text{terms of degree }<r-1
+    \]
+    and that the coefficients $a_\mathcal{F}$ are bounded.
+    Then the coefficients $b_\mathcal{F}$ are bounded below.
+    Furthermore, if the $b_\mathcal{F}$ are bounded, then the $\mathcal{F}_{(r)}$ are bounded.
+  \end{lemma}
+
+  \begin{cproof}
+      We can suppose that the base field $K$ of the sheaves $\mathcal{F}$ is algebraically closed.
+      We endow each $\operatorname{supp}\mathcal{F}_{(r)}$(the union of the components of degree $r$) with the induced reduced structure.
+      Then the degrees of the $\operatorname{supp}\mathcal{F}_{(r)}$ are bounded above by $a$, and so, by \Cref{fga3.iv-2-lemma-2.4}, the $\operatorname{supp}\mathcal{F}_{(r)}$ form a bounded set.
+      Furthermore, for each component of $\operatorname{supp}\mathcal{F}_{(r)}$, the length of $\mathcal{F}_{(r)}$ for this component is $\leqslant a$, and so, if $\mathcal{I}_\mathcal{F}$ is the ideal that defines $\operatorname{supp}\mathcal{F}_{(r)}$, then $\mathcal{F}_{(r)}$ can be considered as a module on the subscheme $Y_\mathcal{F}$ of $X$ defined by $\mathcal{I}_\mathcal{F}^a$.
+      As in the previous lemma, we can also reduce to the case where $\mathcal{F}=\mathcal{F}_{(r)}$, so that $\mathcal{F}$ comes from a module on $Y_\mathcal{F}$.
+      The $Y_\mathcal{F}$ correspond to a bounded family of quotient modules of the $\mathcal{O}_{X_K}$, and thus come from a closed subscheme $Y$ of some scheme $X\times_S T$.
+      We can then apply \Cref{fga3.iv-2-lemma-2.5} to $Y/T$ and $\mathcal{L}\otimes_X Y$, whence the conclusion.
+  \end{cproof}
+
+
+  We can now prove \Cref{fga3.iv-2-theorem-2.2} by induction on the upper bound $r$ of the $\dim\operatorname{supp}\mathcal{F}$.
+  The statement is trivial for $r<0$, so suppose that $r\geqslant0$ and that the statement has been proven for $r'<r$.
+  By \Cref{fga3.iv-2-lemma-2.6}, the $\mathcal{F}_{(r)}$ form a bounded family, and so too, by part (i) of \Cref{fga3.iv-1-proposition-1.2}, do the kernels of the homomorphisms $\mathcal{L}_K\to\mathcal{F}_{(r)}$;
+  there thus exists a coherent module $\mathcal{L}'$ on $X$ such that kernels in question, and thus also the $N_r(\mathcal{F})=\operatorname{Ker}(\mathcal{F}\to\mathcal{F}_{(r)})$, are quotients of modules $\mathcal{L}'_K$.
+  Since the $\mathcal{F}_{(r)}$ are bounded, the $P_{\mathcal{F}_{(r)}}$ are bounded, and the formula
+  \[
+    P_\mathcal{F}
+    = P_{\mathcal{F}_{(r)}} + P_{N_r}
+  \]
+  then shows that the $P_{N_r}$ satisfy the same condition (bs) as the $P_\mathcal{F}$.
+  Thus the $N_r$ satisfy conditions (a) and (bs), and so, by the induction hypothesis, the $(N_r)_{(s)}$ are bounded.
+  But $\mathcal{F}_{(s)}$ is an extension of $\mathcal{F}_{(r)}$ by $(N_r)_{(s)}$, and so, by part (ii) of \Cref{fga3.iv-1-proposition-1.2}, the $\mathcal{F}_{(s)}$ are bounded.
+  For the last claim of \Cref{fga3.iv-2-theorem-2.2}, we note that the kernels $N_s$ of $\mathcal{F}\to\mathcal{F}_{(s)}$ are bounded, by part (i) of \Cref{fga3.iv-1-proposition-1.2}, and that the coefficient of the $n^{s-1}$ term in $P_{N_s}$ is bounded;
+  then \Cref{fga3.iv-2-lemma-2.6} proves that the coefficient of the following term is bounded below.
+  This finishes the proof of \Cref{fga3.iv-2-theorem-2.2}.

@@ -1,0 +1,193 @@
+% !TeX root = ../../fga.tex
+\section{The duality theorem}\label{fga1-5}
+
+In this section, $X$ denotes a non-singular projective variety of dimension $n$.
+
+\begin{theorem}\label{fga1-theorem-2}
+  The fundamental class $\varepsilon_X$ of $\operatorname{H}^n(X,\Omega_X^n)$ is a basis of this vector space.
+\end{theorem}
+
+\begin{cproof}
+  The proof of this statement will be given later on.
+\end{cproof}
+
+With the above theorem, we can thus identify $\operatorname{H}^n(X,\Omega_X^n)$ with the field $k$.
+We now consider the pairings described in \Cref{fga1-2}, which give, in particular, a pairing
+\[
+  \operatorname{Ext}_{\mathcal{O}_X}^p(X;\mathcal{O}_X,\mathcal{F})\times\operatorname{Ext}_{\mathcal{O}_X}^{n-p}(X;\mathcal{F},\Omega_X^n)
+  \to \operatorname{Ext}_{\mathcal{O}_X}^n(X;\mathcal{O}_X,\Omega_X^n)
+\]
+i.e.
+
+\begin{equation}\tag{5.1}\label{fga1-equation-5.1}
+  \operatorname{H}^p(X,\mathcal{F})\times\operatorname{Ext}_{\mathcal{O}_X}^{n-p}(X;\mathcal{F},\Omega_X^n) \to \operatorname{H}^n(X,\Omega_X^n)
+\end{equation}
+
+Taking \Cref{fga1-theorem-2} into account, this pairing defines a homomorphism
+
+\begin{equation}\tag{5.2}\label{fga1-equation-5.2}
+  \operatorname{Ext}_{\mathcal{O}_X}^{n-p}(X;\mathcal{F},\Omega_X^n) \to (\operatorname{H}^p(X,\mathcal{F}))'
+\end{equation}
+
+
+This homomorphism is functorial in $\mathcal{F}$, and commutes with the coboundary maps relative to the exact sequences $0\to\mathcal{F}'\to\mathcal{F}\to\mathcal{F}''\to0$.
+
+
+\begin{theorem}\label{fga1-theorem-3}
+  The homomorphism in \Cref{fga1-equation-5.2} is an isomorphism.
+\end{theorem}
+
+In particular, we recover the following result of Serre:
+
+\begin{corollary}\label{fga1-theorem-3-corollary}
+  Let $E$ be an algebraic vector bundle on $X$, and $\mathcal{O}_X(E)$ the sheaf of germs of regular sections of $X$.
+  Then we have canonical isomorphisms
+  \footnote{This equation is labelled (5.3) in the original copy of the notes, but this seems to be a typo, since a later equation shares the same number, and any references to (5.3) seem to indeed point to the later equation instead of this one.}
+  \[(\operatorname{H}^p(X,\mathcal{O}_X(E)))' = \operatorname{H}^{n-p}(X,\Omega_X^n\otimes\mathcal{O}_X(E'))\]
+\end{corollary}
+
+\begin{cproof}
+It suffices to apply \Cref{fga1-theorem-3} and Corollary 1 of Proposition 1 \Cref{fga1-proposition-1-corollary-1}.
+\end{cproof}
+
+\Cref{fga1-theorem-2} and \Cref{fga1-theorem-3} will follow from the following claim:
+
+\begin{statement}\label{fga1-d}
+  The homomorphism
+  \begin{equation}\tag{5.2 bis}\label{fga1-equation-5.2bis}
+    \operatorname{Ext}_{\mathcal{O}_X}^{n-p}(X;\mathcal{F},\Omega_X^n) \to (\operatorname{H}^p(X,\mathcal{F}))'\otimes\mathcal{L}
+  \end{equation}
+
+  (where $\mathcal{L}=\operatorname{H}^n(X,\Omega_X^n)$) induced by the pairing in \Cref{fga1-equation-5.1} is an isomorphism.
+\end{statement}
+
+We will show that \Cref{fga1-d} implies \Cref{fga1-theorem-2}.
+Let $k_x=\mathcal{O}_{(x)}$ be the structure sheaf of the variety consisting of a single point $x\in X$, and consider the canonical homomorphism $\mathcal{O}_X\to k_x$, and the associated homomorphism
+
+\begin{equation}\tag{5.3}\label{fga1-equation-5.3}
+  \operatorname{H}^0(X,\mathcal{O}_X) \to \operatorname{H}^0(X,k_x)
+\end{equation}
+
+Its transpose can be identified with the homomorphism
+
+\begin{equation}\tag{5.4}\label{fga1-equation-5.4}
+  \operatorname{Ext}_{\mathcal{O}_X}^n(X;k_x,\Omega_X^n)\otimes\mathcal{L}' \to \operatorname{Ext}_{\mathcal{O}_X}^n(X;\mathcal{O}_X,\Omega_X^n)\otimes\mathcal{L}'
+\end{equation}
+
+induced by the homomorphism between the $\operatorname{Ext}^n$ associated to $\mathcal{O}_X\to k_x$, i.e.
+
+\begin{equation}\tag{5.5}\label{fga1-equation-5.5}
+  \operatorname{Ext}_{\mathcal{O}_X}^n(X;k_x,\Omega_X^n) \to \operatorname{Ext}_{\mathcal{O}_X}^n(X;\mathcal{O}_X,\Omega_X^n)
+\end{equation}
+
+Since \Cref{fga1-equation-5.3} is an isomorphism, so too is \Cref{fga1-equation-5.4}, and thus so too is \Cref{fga1-equation-5.5}.
+Since $s_{(x)}$ is a basis of $\operatorname{Ext}_{\mathcal{O}_X}^n(X;k_x,\Omega_X^n)$ by \Cref{fga1-equation-4.2}, it indeed follows that its image $\varepsilon_X$ is a basis of $\operatorname{H}^n(X,\Omega_X^n)$.
+
+It remains only to prove \Cref{fga1-d}, which will follow in a purely formal way from some elementary facts summarised in the following lemmas.
+Here we suppose that $X$ is a closed subset (singular or not) of the projective space $\mathbf{P}$ of dimension $r$.
+We use the notation $\mathcal{O}_\mathbf{P}(m)$ to denote the sheaf on $\mathbf{P}$ denoted by $\mathcal{O}(m)$ in \cite{Ser1955}, and the notation $\mathcal{O}_X(m)$ for the analogous sheaf on $X$.
+
+
+\begin{lemma}\label{fga1-lemma-2}
+  The statement of \Cref{fga1-d} is true if $X=\mathbf{P}$ and $\mathcal{F}=\mathcal{O}_\mathbf{P}(m)$.
+\end{lemma}
+
+\begin{cproof}
+  This lemma can be proved by a direct calculation.
+  The explicit calculation of the $\operatorname{H}^i(\mathbf{P},\mathcal{O}_\mathbf{P}(m))$ can be found in \cite{Ser1955}, but it also can be done in a simpler way.
+  Computing the cup product $\operatorname{H}^i(\mathbf{P},\mathcal{O}_\mathbf{P}(m))\times\operatorname{H}^j(\mathbf{P},\mathcal{O}_\mathbf{P}(m)') \to \operatorname{H}^{i+j}(\mathbf{P},\mathcal{O}_\mathbf{P}(m+m'))$ (which is necessary to calculate the pairing in \Cref{fga1-equation-5.1}) does not present any difficulty.
+\end{cproof}
+
+
+\begin{lemma}\label{fga1-lemma-3}
+  Every coherent algebraic sheaf $\mathcal{F}$ on $X$ is isomorphic to a sheaf that is some quotient of $\mathcal{O}_X(-m)^k$, and we can take $m$ to be as large as we wish.
+\end{lemma}
+
+\begin{cproof}
+  This follows from the fact that $\mathcal{F}\otimes\mathcal{O}_X(m)$ is "generated by its sections" for large enough $m$;
+  see \cite{Ser1955}.
+\end{cproof}
+
+
+\begin{lemma}\label{fga1-lemma-4}
+  Let $i>0$.
+  Then $\operatorname{H}^{r-i}(\mathbf{P},\mathcal{O}_\mathbf{P}(-m))=0$ for large enough $m$;
+  and, for every coherent algebra sheaf $\mathcal{B}$ on $X$, we have that $\operatorname{Ext}_{\mathcal{O}_X}^i(X;\mathcal{O}_X(-m),\mathcal{B})=0$ for large enough $m$.
+\end{lemma}
+
+\begin{cproof}
+  The first claim follows from the explicit calculations mentioned above;
+  for the second, we note that we have an isomorphism
+  \[\operatorname{Ext}_{\mathcal{O}_X}^i(X;\mathcal{O}_X(-m),\mathcal{B}) = \operatorname{H}^i(X,\mathcal{B}\otimes\mathcal{O}(m))\]
+  (by Corollary 1 of Proposition 1 \Cref{fga1-proposition-1-corollary-1}), whence the conclusion, by a well-known result of \cite{Ser1955}.
+\end{cproof}
+
+
+Combining the previous two lemmas, we find:
+
+\begin{corollary}\label{fga1-lemma-3-and-4-corollary}
+  Let $i>0$.
+  Then the functor $\mathcal{F}\mapsto\operatorname{H}^{r-i}(\mathbf{P},\mathcal{F})$ on the category of coherent algebraic sheaves on $\mathbf{P}$ is coeffaceable, and so too is the functor $\operatorname{Ext}_{\mathcal{O}_X}^i(X;\mathcal{F},\mathcal{B})$ on the category of coherent algebraic sheaves on $X$.
+\end{corollary}
+
+
+\begin{lemma}\label{fga1-lemma-5}
+  Let $\mathcal{A}$ and $\mathcal{B}$ be coherent algebraic sheaves on $X$, and let $\mathcal{A}(m)=\mathcal{A}\otimes\mathcal{O}_X(m)$.
+  Then, for large enough $m$, the canonical homomorphism
+  \[
+  \operatorname{Ext}_{\mathcal{O}_X}^i(X;\mathcal{A}(-m),\mathcal{B})
+  \to \operatorname{H}^0(X,\mathcal{E}xt_{\mathcal{O}_X}^i(\mathcal{A}(-m),\mathcal{B}))
+  = \operatorname{H}^0(X,\mathcal{E}xt_{\mathcal{O}_X}^i(\mathcal{A},\mathcal{B})(m))
+  \]
+  is an isomorphism.
+\end{lemma}
+\begin{cproof}
+
+  This follows immediately from the spectral sequence in \Cref{fga1-proposition-1} applied to $\mathcal{A}(-m)$ and $\mathcal{B}$, since we then have that
+  \[
+  E_2^{p,q}(\mathcal{A}(-m),\mathcal{B})
+  = \operatorname{H}^p(X,\mathcal{E}xt_{\mathcal{O}_X}^q(\mathcal{A}(-m),\mathcal{B}))
+  = \operatorname{H}^p(X,\mathcal{E}xt_{\mathcal{O}_X}^q(\mathcal{A},\mathcal{B})(m))
+  \]
+  which is zero for $p>0$ and large enough $m$.
+\end{cproof}
+
+We now prove \Cref{fga1-d} in the case where $X=\mathbf{P}$.
+We will first prove that \Cref{fga1-equation-5.2bis} is an isomorphism for $p=n$;
+since both sides are then left-exact functors (since $\operatorname{H}^{r+i}(\mathbf{P},\mathcal{F})=0$), it follows from \Cref{fga1-lemma-3} that it suffices to prove the claim for $\mathcal{F}=\mathcal{O}_\mathbf{P}(-m)$, but this is covered by \Cref{fga1-lemma-2}.
+Since the homomorphisms in \Cref{fga1-equation-5.2bis} are functorial and compatible with the coboundary maps, and since, for $p<n$, both sides of \Cref{fga1-equation-5.2bis} are coeffaceable functors in $\mathcal{F}$ (the corollary to Lemmas 3 and 4 \Cref{fga1-lemma-3-and-4-corollary}), it follows, by a standard argument, that \Cref{fga1-equation-5.2bis} is an isomorphism for all $p$.
+This proves the duality theorem for the projective space.
+
+Now suppose that $X$ is arbitrary, but non-singular.
+By the duality theorem for $\mathbf{P}$, we have an isomorphism
+\[
+  \operatorname{H}^n(X,\mathcal{F})
+  = \operatorname{H}^n(\mathbf{P},\mathcal{F})'
+  = \operatorname{Ext}_{\mathcal{O}_\mathbf{P}}^{r-n}(\mathbf{P};\mathcal{F},\Omega_\mathbf{P}^r).
+\]
+By \Cref{fga1-lemma-1}, the far-right-hand side can be identified with
+\[
+  \operatorname{Hom}_{\mathcal{O}_\mathbf{P}}(\mathbf{P};\mathcal{F},\omega_X^n)
+  = \operatorname{Hom}_{\mathcal{O}_X}(X;\mathcal{F},\Omega_X^n)
+  = \operatorname{Ext}_{\mathcal{O}_X}^0(X;\mathcal{F},\Omega_X^n)
+\]
+whence we have an isomorphism
+
+\begin{equation}\label{fga1-equation-5.6}
+  \operatorname{H}^n(X,\mathcal{F})' = \operatorname{Hom}_{\mathcal{O}_X}(X;\mathcal{F},\Omega_X^n) = \operatorname{Ext}_{\mathcal{O}_X}^0(X;\mathcal{F},\Omega_X^n)
+\end{equation}
+
+Taking $\mathcal{F}=\Omega_X^n$, we obtain an isomorphism
+
+\begin{equation}\label{fga1-equation-5.7}
+  \eta\colon \operatorname{H}^n(X,\Omega_X^n) \xrightarrow{\sim} k
+\end{equation}
+
+
+We can prove that the isomorphism in \Cref{fga1-equation-5.6} is exactly \Cref{fga1-equation-5.2bis} with $p=n$ and $\mathcal{L}=k$, by \Cref{fga1-equation-5.7}.
+Subsequently, \Cref{fga1-equation-5.2bis} is an isomorphism for $p=n$.
+To prove that it is an isomorphism for all $p$, it again suffices to prove that, for $p<n$, the two sides of \Cref{fga1-equation-5.2bis} are coeffaceable functors in $\mathcal{F}$, and, a fortiori (taking \Cref{fga1-lemma-3} into account), that the two sides are zero when we take $\mathcal{F}=\mathcal{O}_X(-m)$ with large enough $m$.
+But, for the left-hand side, this is true by \Cref{fga1-lemma-4}, and for the right-hand side we can write, using the duality theorem for $\mathbf{P}$,
+\[\operatorname{H}^p(X,\mathcal{O}_X(-m))' = \operatorname{Ext}_{\mathcal{O}_\mathbf{P}}^{r-p}(\mathbf{P};\mathcal{O}_X(-m),\Omega_\mathbf{P}^r)\]
+The right-hand side is zero for $p<n$ and large enough $m$, as follows from \Cref{fga1-lemma-5} (where in fact $X=\mathbf{P}$) and from the fact that $\mathcal{O}_X$ is of cohomological dimension $\leqslant r-n$ when thought of as a coherent algebraic sheaf on $\mathbf{P}$ (since $X$ is non-singular), whence
+\[\mathcal{E}xt_{\mathcal{O}_\mathbf{P}}^{r-p}(\mathcal{O}_X,\Omega_\mathbf{P}^r) = 0 \quad\text{for }p<n\]

@@ -1,0 +1,22 @@
+% !TeX root = ../../fga.tex
+\section{Formal schemes}\label{fga2-2}
+
+Let $X$ be a scheme, and $X'$ a closed subset of $X$.
+Then there exists a coherent subsheaf $\mathcal{J}$ of $\mathcal{O}_X$ such that $X'=\operatorname{supp}\mathcal{O}_X/\mathcal{J}$ (and there even exists a largest such one).
+Endowing $X'$ with the sheaf $\mathcal{O}_X/\mathcal{J}$ makes $X'$ a scheme, denoted $X_0$;
+such a scheme is called a \emph{closed subscheme of $X$}.
+We can also, for any $n$, consider $X'$ endowed with $\mathcal{O}_X/\mathcal{J}^{n+1}$, denoted $X_n$, which is a closed subprescheme of $X$ whose underlying set is again $X'$, but with a different structure sheaf, namely $\mathcal{O}_{X_n}=\mathcal{O}_X/\mathcal{J}^{n+1}$.
+Clearly the $\mathcal{O}_{X_n}$ form a projective system of sheaves of rings on $X$, whose projective limit $\overline{\mathcal{O}_X}$ is called the \emph{formal completion of $\mathcal{O}_X$ along $X'$}.
+Endowed with this sheaf of rings, $X'$ is called the \emph{formal completion of $X$ along $X'$}, and is thus a ringed space, but not a scheme in general.
+For every coherent sheaf $\mathcal{F}$ on $X$, we can similarly consider the formal completion $\overline{\mathcal{F}}=\varprojlim_n\mathcal{F}_n$ of $\mathcal{F}$ along $X'$ (where $\mathcal{F}_n=\mathcal{F}\otimes_{\mathcal{O}_X}\mathcal{O}_X/\mathcal{J}^{n+1}$), which is a sheaf of modules on $\overline{X}$.
+Its sections are called \emph{formal sections of $\mathcal{F}$ along $X$}, and can be identified with elements of $\varprojlim_n\operatorname{G_a}mma(X',\mathcal{F}_n)$.
+For $\mathcal{F}=\mathcal{O}_X$, we recover the "holomorphic functions" of $X$ along $X'$, in the sense of Zariski (whose terminology we will not follow, due to its interferences with classical terminology).
+
+We define a \emph{formal scheme} (implicitly assumed to be Noetherian) to be a topological space $\mathfrak{X}$ endowed with a sheaf of topological rings $\mathcal{O}_{\mathfrak{X}}$ satisfying the following condition:
+there is an isomorphism of sheaves of topological rings $\mathcal{O}_{\mathfrak{X}}=\varprojlim_n\mathcal{O}_n$, where the $\mathcal{O}_n$ form a projective system of sheaves of rings on $\mathfrak{X}$, with each one making $\mathfrak{X}$ into a scheme $\mathfrak{X}_n$, and such that, for $m\geqslant n$, the homomorphism $\mathcal{O}_m\to\mathcal{O}_n$ is surjective and has $\mathcal{J}_m^{n+1}$ as its kernel, where $\mathcal{J}_m$ is the kernel of $\mathcal{O}_m\to\mathcal{O}_0$.
+We will show that $\mathcal{O}_{\mathfrak{X}}$ is a \emph{coherent} sheaf of \emph{local Noetherian} rings.
+
+By the definitions, a formal completion $\overline{X}$ as above is a formal scheme, and, conversely, every formal scheme is \emph{locally} of this type.
+In fact, the data of a formal \emph{affine} scheme (i.e. such that $\mathfrak{X}_0$ is affine, which implies that all the $\mathfrak{X}_n$ are affine) is equivalent to the data of a separated complete $\mathcal{J}$-adic Noetherian topological ring.
+
+The usual definitions (morphism, morphism of finite type, proper morphism, etc.) for ordinary schemes generalise without problem to formal schemes.

@@ -1,0 +1,82 @@
+% If you intend to adapt the material in this textbook
+% in any way, then you must set the \adaptername and
+% \adapteremail commands on lines 13 and 14 of this file
+% to your full name and email address, respectively.
+%
+% Example usage:
+% \newcommand{\adaptername}{Exampleface McLastname}
+% \newcommand{\adapteremail}{exampleface-mclastname@example.web}
+%
+% Any duplications, derivations or adaptations of this work
+% must be released under the Creative Commons BY-SA 4.0 licence.
+
+\newcommand{\adaptername}{Tim Hosgood} % Your full name
+\newcommand{\adapteremail}{} % Your email address
+
+% Page layout
+% 0:6"x9", 1:a4, 2:usletter, 3:tablet, 4:phone
+\newcounter{bookformat}\setcounter{bookformat}{0}
+
+% Book version - if you are adapting the book, please leave
+% these unchanged so that the original version can be traced.
+\newcounter{versionmajor}\setcounter{versionmajor}{1}
+\newcounter{versionminor}\setcounter{versionminor}{0}
+\newcounter{versionpatch}\setcounter{versionpatch}{-1}
+\newcounter{versionstable}\setcounter{versionstable}{0}
+
+\documentclass[10pt, oneside]{book}
+
+% Includes
+\input{book/includes/_includes.tex}
+
+% Uncomment to remove hyperlinks (useful for print versions)
+% \hypersetup{draft}
+
+\begin{document}
+
+% Uncomment to display cover spread
+% \includepdf[pages=-,fitpaper=true,noautoscale=false]{book/media/spread.pdf}
+
+\frontmatter
+
+% Title page
+\newgeometry{centering,bindingoffset={0in}}
+\input{book/front-matter/titlepage.tex}
+\restoregeometry
+
+\clearpage
+
+% Table of contents
+\bookmark[page=5,level=0]{Contents}
+\tableofcontents
+
+\input{book/front-matter/foreword.tex}
+
+\mainmatter
+
+\part{Duality theorems for coherent algebraic sheaves}
+
+\input{book/fga1/_fga1.tex}
+
+\part{Formal geometry and algebraic geometry}
+
+\input{book/fga2/_fga2.tex}
+
+\part{Technique of descent and existence theorems in algebraic geometry}\label{fga3}
+
+\input{book/fga3-1/_fga3-1.tex}
+\input{book/fga3-2/_fga3-2.tex}
+\input{book/fga3-3/_fga3-3.tex}
+\input{book/fga3-4/_fga3-4.tex}
+\input{book/fga3-5/_fga3-5.tex}
+\input{book/fga3-6/_fga3-6.tex}
+
+\backmatter
+
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliographystyle{alpha}
+\bibliography{fga.bib}
+
+\cleardoublepage
+
+\end{document}

@@ -1,0 +1,48 @@
+% !TeX root = ../../fga.tex
+\section{The principal existence theorem: statement}\label{fga3.v-3}
+
+We do not have, not even conjecturally, an existence statement for Picard preschemes that encompasses all known cases.
+A "practically necessary" condition, if we can say that, is that $f\colon X\to S$ be \emph{proper} (ensuring essential finiteness properties) and \emph{flat}.
+These conditions are not sufficient, even if $S$ is the spectrum of the algebra of dual numbers $k[t]/(t^2)$ over a field $k$ (say, the field $\mathbb{C}$ of complex numbers), and $X$ is of dimension $1$.
+At the moment of writing this present talk, the most important existence theorems for the Picard prescheme follow from the following theorem:
+
+
+\begin{theorem}\label{fga3.v-3-theorem-3.1}
+    Let $f\colon X\to S$ be a morphism of locally Noetherian preschemes.
+    Suppose that
+    \begin{enumerate}[i.]
+        \item $f$ is projective
+        \item $f$ is flat
+        \item the geometric fibres of $f$ are integral.
+    \end{enumerate}
+
+    Under these conditions, $\underline{\operatorname{Pic}}_{X/S}$ exists.
+\end{theorem}
+
+The proof, which will be sketched in the following two sections, will at the same time show the following:
+Let $\xi$ be the section of $\underline{\operatorname{Pic}}_{X/S}$ that corresponds to a very ample sheaf $\mathcal{O}_X(1)$ over $X/S$ (i.e. induced by a projective embedding $X\to\mathbb{P}(\mathcal{E})$);
+then there exists an open subset $U$ of $\underline{\operatorname{Pic}}_{X/S}$, disjoint union of quasi-projective open subsets of $S$, such that $U$ is stable under translation by $\xi$, and such that $\underline{\operatorname{Pic}}_{X/S}$ is the increasing union of opens $U\setminus n\xi$ (each isomorphic to $U$).
+It thus follows, in particular, that, under the conditions of \Cref{fga3.v-3-theorem-3.1}, that $\underline{\operatorname{Pic}}_{X/S}$ is \emph{separated} over $S$.
+
+\begin{remark}\label{fga3.v-3-remark-3.2}
+    We see from examples (with $S$ the spectrum of a discrete valuation ring, and $X$ of relative dimension $1$ over $S$, for example), that if we omit hypothesis (iii) in \Cref{fga3.v-3-theorem-3.1} and replace it with the weaker hypothesis that, for all $s\in S$, the homomorphism $k(s)\to\operatorname{H}^0(X_s,\mathcal{O}_{X_s})$ be an isomorphism, then $\underline{\operatorname{Pic}}_{X/S}$ is not necessarily separated over $S$;
+    both in the case where the geometric fibres of $f$ are reduced, but where a generic integral geometric fibre "blows up" by specialisation into two irreducible components, and in the case where the geometric fibres of $f$ are irreducible, but where a generic integral geometric fibre specialises to a "multiple fibre".
+    The first case happens, for example, with a conic that degenerates into two concurrent lines; an example of the second was shown to me by D. Mumford, with an elliptic curve that degenerates to a double elliptic curve.
+    These examples work in any characteristic.
+\end{remark}
+
+\begin{remark}\label{fga3.v-3-remark-3.3}
+    Under the conditions of \Cref{fga3.v-3-theorem-3.1}, I do not know if $\underline{\operatorname{Pic}}_{X/S}$ is a disjoint union of opens that are of finite type, thus quasi-projective, over $S$.
+    We note that the study of the Hilbert polynomials $Q\in\mathbb{Q}[t]$ allows us, as in the case of Hilbert schemes (\Cref{fga3.iv}), to give a decomposition of $\underline{\operatorname{Pic}}_{X/S}$ as a disjoint sum of opens $\underline{\operatorname{Pic}}_{X/S}^Q$, and it seems plausible that these opens are quasi-projective over $S$;
+    this is what we will see at least in the next talk when $f$ is a simple morphism.
+    We draw attention to the fact that if we replace hypothesis (i) by the hypothesis "$X$ is \emph{locally} projective over $S$" (which is sufficient to prove \Cref{fga3.v-3-theorem-3.1}, since the question of existence of $\underline{\operatorname{Pic}}_{X/S}$ is clearly local on $S$) however, then it is easy to give examples where \emph{$\underline{\operatorname{Pic}}_{X/S}$ contains connected components that are not of finite type over $S$}.
+    For example, let $X_0$ be a non-singular projective algebraic variety over an algebraically closed field $k$, endowed with an automorphism $u$ and an element $\xi$ of the Néron–Severi group of $X_0$ such that the $u^n(\xi)$ are pairwise distinct.
+    We can, for example, take $X_0$ to be the product of an elliptic curve $E$ with itself, and $u$ to be the automorphism $(x,y)\mapsto(x,y+x)$ of $E\times E$.
+    Let $S$ be the union of two non-singular irreducible curves that meet at two points $a$ and $b$.
+    There is a connected principal covering $P$ on $S$ of the group $\mathbb{Z}$, and using the action of $\mathbb{Z}$ on $X_0$ defined by $u$ we thus obtain an associated bundle on $S$, with fibre $X_0$ (trivial on $S\setminus\{a\}$ and $S\setminus\{b\}$), which is in fact an \emph{abelian} scheme over $S$ in the particular case in question.
+    We easily see that $\underline{\operatorname{Pic}}_{X/S}$, which is also the bundle associated to $P$ and to the action of $\mathbb{Z}$ on $\underline{\operatorname{Pic}}_{X_0/k}$ via $u$, contains a connected component that is isomorphic to $P\times\underline{\operatorname{Pic}}_{X_0/k}^0$ (where $\underline{\operatorname{Pic}}^0$ denotes the connected component of the identity element in $\underline{\operatorname{Pic}}$), which is not of finite type over $S$.
+    (One can equally produce analogous phenomena in various cases of non-separated Picard preschemes over $S$, as described in \Cref{fga3.v-3-remark-3.3}).
+
+    \emph{[Comp.]}
+    The question raised here has been answered in the positive by Mumford (see \Cref{fga3.vi}).
+\end{remark}

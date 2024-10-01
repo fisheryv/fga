@@ -1,0 +1,50 @@
+% !TeX root = ../../fga.tex
+\section{Relation to the notion of norm and symmetric products}\label{fga3.iv-6}
+
+
+  Let $S$ be a prescheme, let $X$ and $Y$ be $S$-preschemes, and let
+  \[
+    u\colon(X/S)^n\to Y
+  \]
+  be a \emph{symmetric} $S$-morphism from the $n$-th cartesian power of $X/S$ to $Y$.
+  Suppose, for simplicity, that $S$ is locally Noetherian, and that $X$ and $Y$ are of finite type over $S$.
+  We can then associate, to every coherent module $\mathcal{F}$ on $X$ with finite support on $S$ that is furthermore flat over $S$ and of rank equal to $n$ with respect to $S$ (i.e. such that $f_*(\mathcal{F})$ is a locally free module of rank $n$ on $S$), in a natural way a section of $Y$ over $S$:
+  \[
+    \mathcal{N}_{X/S}^u(\mathcal{F}) \in \operatorname{G_a}mma(Y/S).
+  \]
+  We will not give here the details of the definition, but instead content ourselves with noting that the formalism to which one arrives is a natural generalisation of the usual formalism of norms and traces.
+  When the symmetric $n$-th power of $X$ over $S$ exists (for example, if the orbits of the symmetric group $\sigma_n$ acting on $(X/S)^n$ are contained inside affine opens), we can take $Y$ to be this symmetric power $\operatorname{Symm}_S^n(X)$, and we obtain a canonical element
+  \[
+    \mathcal{N}_{X/S}(\mathcal{F}) \in \operatorname{G_a}mma(\operatorname{Symm}_S^n(X)/S)
+  \]
+  which allows us to recover the $\mathcal{N}_{X/S}^u(\mathcal{F})$.
+  Another important case is that where $X$ is a commutative monoid over $S$, and $X=Y$, and the morphism $u$ comes from the composition law of $X$.
+  We then simply write $\mathcal{N}(\mathcal{F})$ for the section of $X$ over $S$ associated to the module $\mathcal{F}$ on $X$.
+
+
+
+  Now suppose that we have a coherent module $\mathcal{F}$ on $X$ such that $\underline{\operatorname{Quot}}_{\mathcal{F}/X/S}$ exists, or at least such that the functor $\mathcal{Q}uot_{\mathcal{F}/X/S}^n$, which associates to each $S'$ over $S$ the set of coherent quotient sheaves $\mathcal{M}$ of $\mathcal{F}'=\mathcal{F}\otimes_{\mathcal{O}_S}\mathcal{O}_{S'}$ that are flat over $S$ and of relative rank $n$, is representable by an $S$-prescheme $\underline{\operatorname{Quot}}_{\mathcal{F}/X/S}^n$.
+  (If $X$ is quasi-projective over $S$, then $\underline{\operatorname{Quot}}_{\mathcal{F}/X/S}^n$ indeed exists, and is exactly, with the notation of \Cref{fga3.iv-3}, $\underline{\operatorname{Quot}}_{\mathcal{F}/X/S}^P$, where $P$ is the polynomial consisting of the constant term $n$).
+  Since the formation of the $\mathcal{N}_{X/S}^u(\mathcal{M})$ is compatible with base change, we thus obtain a canonical morphism
+  \[
+    \mathcal{N}_{X/S}^u\colon \underline{\operatorname{Quot}}_{\mathcal{F}/X/S}^n \to Y
+  \]
+  and, in particular, if the $n$-th symmetric power of $X$ over $S$ exists,
+  \[
+    \mathcal{N}_{X/S}\colon \underline{\operatorname{Quot}}_{\mathcal{F}/X/S}^n \to \operatorname{Symm}_S^n(X).
+  \]
+  The most important case is that where $\mathcal{F}=\mathcal{O}_X$, which gives a morphism
+  \[
+    \mathcal{N}_{X/S}\colon \underline{\operatorname{Hilb}}_{X/S}^n \to \operatorname{Symm}_S^n(X).
+  \]
+  This is evidently an isomorphism for $n=0$ and $n=1$.
+  But for $n\geqslant1$, even if $S$ is the spectrum of a field $k$, and $X$ is simple over $S$, it is not in general an isomorphism nor even an injective morphism, since a sub-scheme of dimension $0$ of $X$ (corresponding, for example, to a primary ideal $\mathcal{I}$ for the maximal ideal in a local ring $\mathcal{O}_{X,x}$, for a closed point $x$ of $X$) is not known when we know only the cycle that it defines (to be precise, when we know the codimension over $k$ of $\mathcal{I}$ in $\mathcal{O}_{X,x}$).
+  We can only say the following (where $S$ is once more arbitrary):
+
+  \begin{enumerate}[label=\alph*.]
+    \item If $X$ is simple over $S$, then the norm morphism defines an isomorphism from the open of $\underline{\operatorname{Hilb}}_{X/S}^n$ that corresponds to the classification of étale covers of rank $n$ contained inside $X$ (cf. §4.b \Cref{fga3.iv-4}) to the open of $\operatorname{Symm}_S^n(X)$ that corresponds to the $n$-cycles without multiple components.
+    \item If furthermore $X$ is of relative dimension $1$ over $S$, then the norm morphism even defines an isomorphism from $\underline{\operatorname{Hilb}}_{X/S}^n$ to $\operatorname{Symm}_{X/S}^n$.
+  \end{enumerate}
+
+  This second fact is due to the fact that a subscheme of dimension $0$ of a non-singular algebraic curve is known whenever we know the corresponding cycle.
+  The same remark also applies more generally to Cartier divisors that are positive over a non-singular algebraic scheme (and it is not excluded that, in this very particular case, the Chow variety gives the same thing as the Hilbert variety).

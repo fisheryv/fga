@@ -1,0 +1,291 @@
+% !TeX root = ../../fga.tex
+\section{Representable and pro-representable functors}\label{fga3.ii-a}
+
+\subsection{Representable functors}\label{fga3.ii-a.1}
+
+Let $\mathcal{C}$ be a category.
+For all $X\in\mathcal{C}$, let $h_X$ be the contravariant functor from $\mathcal{C}$ to the category $\mathtt{Set}$ of sets given by
+\[
+    \begin{aligned}
+        h_X\colon \mathcal{C} & \to \mathtt{Set}
+        \\Y&\mapsto \operatorname{Hom}(Y,X).
+    \end{aligned}
+\]
+If we have a morphism $X\to X'$ in $\mathcal{C}$, then this evidently induces a morphism $h_X\to h_{X'}$ of functors;
+$h_X$ is a covariant functor in $X$, i.e. we have defined a \emph{canonical covariant functor}
+\[
+    h\colon \mathcal{C} \to \operatorname{Hom}(\mathcal{C}^\circ,\mathtt{Set})
+\]
+from $\mathcal{C}$ to the category of covariant functors from the dual $\mathcal{C}^\circ$ of $\mathcal{C}$ to the category of sets.
+We then recall:
+
+\begin{proposition}\label{fga3.ii-a.1-proposition-1.1}
+    This functor $h$ is \emph{fully faithful};
+    in other words, for every pair $X,X'$ of objects of $\mathcal{C}$, the natural map
+    \[
+        \operatorname{Hom}(X,X') \to \operatorname{Hom}(h_X,h_{X'})
+    \]
+    is \emph{bijective}.
+\end{proposition}
+
+In particular, if a functor $F\in\operatorname{Hom}(\mathcal{C}^\circ,\mathtt{Set})$ is isomorphic to a functor of the form $h_X$, then \emph{$X$ is determined up to unique isomorphism}.
+We then say that the functor $F$ is \emph{representable}.
+The above proposition then implies that the canonical functor $h$ defines an \emph{equivalence} between the category $\mathcal{C}$ and the full subcategory of $\operatorname{Hom}(\mathcal{C}^\circ,\mathtt{Set})$ consisting of representable functors.
+This fact is the basis of \emph{the idea of a "solution of a universal problem"}, with such a problem always consisting of examining if a given (contravariant, as here, or covariant, in the dual case) functor from $\mathcal{C}$ to $\mathtt{Set}$ is representable.
+Note further that, just by the definition of products in a category \cite{Gro1957}, the functor $h\colon X\mapsto h_X$ commutes with products whenever they exist (and, more generally, with finite or infinite projective limits, and, in particular, with fibred products, taking "kernels" [\Cref{fga2}], etc., whenever such things exist): we have an isomorphism of functors
+\[
+    h_{X\times X'} \xrightarrow{\sim} h_X\times h_{X'}
+\]
+whenever $X\times X'$ exists, i.e. we have functorial (in $Y$) bijections
+\[
+    h_{X\times X'} \xrightarrow{\sim} h_X(Y)\times h_{X'}(Y).
+\]
+In particular, the data of a morphism
+\[
+    X\times X' \to X''
+\]
+in $\mathcal{C}$ (i.e. of a "\emph{composition law}" in $\mathcal{C}$ between $X$, $X'$, and $X''$) is equivalent to the data of a morphism $h_{X\times X'}=h_X\times h_{X'}\to h_{X''}$, i.e. to the data, for all $Y\in\mathcal{C}$, of a composition law of \emph{sets}
+\[
+    h_X(Y)\times h_{X'}(Y) \to h_{X''}(Y)
+\]
+such that, for every morphism $Y\to Y'$ in $\mathcal{C}$, the system of set maps
+\[
+    h_{X^{(i)}}(Y) \to h_{X^{(i)}}(Y')
+    \qquad\text{for }i=0,1,2
+\]
+is a morphism for the two composition laws, with respect to $Y$ and $Y'$.
+In this way, we see that the idea of a "$\mathcal{C}$-group" structure, or a "$\mathcal{C}$-ring" structure, etc. on an object $X$ of $\mathcal{C}$ can be expressed in the most manageable way (in theory as much as in practice) by saying that, for every $Y\in\mathcal{C}$, we have a group law (resp. ring law, etc.) in the usual sense on the set $h_X(Y)$, with the maps $h_X(Y)\to h_X(Y')$ corresponding to morphisms $Y\to Y'$ that should be group homomorphisms (resp. ring homomorphisms, etc.).
+This is the most intuitive and manageable way of defining, for example, the various classical groups $\operatorname{G_a}$, $\operatorname{G_m}$, $\operatorname{GL}(n)$, etc. on a prescheme $S$ over an arbitrary base, and of writing the classical relations between these groups, or of placing a "vector bundle" structure on the affine scheme $V(\mathcal{F})$ over $S$ defined by a quasi-coherent sheaf $\mathcal{F}$, and of defining and studying the many associated flag varieties (Grassmannians, projective bundles), etc.;
+\emph{the general yoga is purely and simply identifying, using the canonical functor $h$, the objects of $\mathcal{C}$ with particular contravariant functors (namely, representable functors) from $\mathcal{C}$ to the category of sets}.
+
+The usual procedure of reversing the arrows that is necessary, for example, in the case of affine schemes in order to pass from the geometric language to the language of commutative algebra, leads us to dualise the above considerations, and, in particular, to also introduce \emph{covariant representable functors $\mathcal{C}\to\mathtt{Set}$}, i.e. those of the form $Y\mapsto\operatorname{Hom}(X,Y)=h'_X(Y)$.
+
+
+\subsection{Pro-representable functors, pro-objects}\label{fga3.ii-a.2}
+
+Let $\mathcal{X}=(X_i)_{i\in I}$ be a projective system of objects of $\mathcal{C}$;
+there is a corresponding covariant functor
+\[
+    h'_{\mathcal{X}}
+    = \varinjlim_i h'_{X_i}
+\]
+which can be written more explicitly as
+\[
+    h'_{\mathcal{X}}(Y)
+    = \varinjlim_i h'_{X_i}(Y)
+    = \varinjlim_i\operatorname{Hom}(X_i,Y)
+\]
+which is a functor from $\mathcal{C}$ to $\mathtt{Set}$.
+A functor from $\mathcal{C}$ to $\mathtt{Set}$ that is isomorphic to a functor of this type \emph{with $I$ filtered} is said to be \emph{pro-representable}.
+By the previous section, these are exactly the functors that are isomorphic to \emph{filtered inductive limits of representable functors}.
+Let $\mathcal{X}'=(X_j)_{j\in J}$ be another filtered projective system in $\mathcal{C}$ (indexed by another filtered preordered set of indices $J$).
+Then we can easily show that we have a canonical bijection
+\[
+    \operatorname{Hom}(h_{\mathcal{X}'},h_{\mathcal{X}})
+    = \varprojlim_j\varinjlim_i\operatorname{Hom}(X_i,X'_j)
+\]
+(generalising \Cref{fga3.ii-a.1-proposition-1.1}).
+This leads to introducing the \emph{category $\operatorname{Pro}(\mathcal{C})$ of pro-objects of $\mathcal{C}$}, whose objects are projective systems of objects of $\mathcal{C}$ (indexed by arbitrary filtered preordered sets of indices), and whose morphisms between objects $\mathcal{X}=(X_i)_{i\in I}$ and $\mathcal{X}'=(X_j)_{j\in J}$ are given by
+\[
+    \operatorname{Pro}\operatorname{Hom}(\mathcal{X},\mathcal{X}')
+    = \varprojlim_j\varinjlim_i\operatorname{Hom}(X_i,X'_j),
+\]
+with the composition of pro-homomorphisms being evident.
+By the very construction itself, $\mathcal{X}\mapsto h'_{\mathcal{X}}$ can be considered as a contravariant functor in $\mathcal{X}$, establishing an \emph{equivalence between the dual category of the category $\operatorname{Pro}(\mathcal{C})$ of pro-objects of $\mathcal{C}$ and the category of pro-representable covariant functors from $\mathcal{C}$ to $\mathtt{Set}$}.
+Of course, an object $X$ of $\mathcal{C}$ canonically defines a pro-object, denoted again by $X$, so that \emph{$\mathcal{C}$ is equivalent to a full subcategory of $\operatorname{Pro}(\mathcal{C})$}.
+Then, if $\mathcal{X}=(X_i)_{i\in I}$ is an arbitrary pro-object of $\mathcal{C}$, then (with the above identification) we have that
+\[
+    \mathcal{X}
+    = \varprojlim_i X_i
+\]
+with the projective limit being \emph{taken in $\operatorname{Pro}(\mathcal{C})$} (since $h_{\mathcal{X}}=\varinjlim_i h_{X_i}$).
+
+
+We draw attention to the fact that, even if the projective limit of the $X_i$ \emph{exists in $\mathcal{C}$}, it will generally \emph{not} be isomorphic to the projective limit $\mathcal{X}$ in $\operatorname{Pro}(\mathcal{C})$, as is already evident in the case where $\mathcal{C}$ is the category of sets.
+We note that, by the definition itself, $\varprojlim{}_{\mathcal{C}}X_i=L$ is defined by the condition that the functor
+\[
+    \varprojlim_i\operatorname{Hom}_{\mathcal{C}}(Y,X_i)
+    = \operatorname{Hom}_{\operatorname{Pro}(\mathcal{C})}(Y,\mathcal{X})
+\]
+in $Y\in\mathcal{C}$ and with values in $\mathtt{Set}$ be representable via $\mathcal{L}$, i.e. that it be isomorphic to $\operatorname{Hom}_{\mathcal{C}}(Y,\mathcal{L})$;
+then \emph{$\lim{}_{\mathcal{C}}X_i$ is already defined in terms of the \emph{pro-object} $\mathcal{X}$}, and, in a precise way, depends functorially on the pro-object $\mathcal{X}$ whenever it is defined;
+there is therefore no problem with denoting it by $\lim{}_{\mathcal{C}}(\mathcal{X})$.
+If projective limits in $\mathcal{C}$ always exist, then $\lim{}_{\mathcal{C}}(\mathcal{X})$ is a functor from $\operatorname{Pro}(\mathcal{C})$ to $\mathcal{C}$, and there is a canonical homomorphism of functors $\lim_\mathcal{C}(\mathcal{X})\to\mathcal{X}$.
+Since every (covariant, say, for simplicity) functor
+\[
+    F\colon \mathcal{C} \to \mathcal{C}'
+\]
+can be extended in an obvious way to a functor
+\[
+    \operatorname{Pro}(F)\colon \operatorname{Pro}(\mathcal{C}) \to \operatorname{Pro}(\mathcal{C}'),
+\]
+it follows that, if projective limits always exist in $\mathcal{C}'$, then $F$ also canonically defines a composite functor
+\[
+    \overline{F}
+    = \varprojlim{}_{\mathcal{C}'}\colon \operatorname{Pro}(\mathcal{C}) \to \mathcal{C}'
+\]
+sending $\mathcal{X}=(X_i)_{i\in I}$ to $\varprojlim{}_{\mathcal{C}'}F(X_i)$.
+
+A pro-object $\mathcal{X}$ is said to be a \emph{strict pro-object} if it is isomorphic to a pro-object $(X_i)_{i\in I}$, where the transition morphisms $X_i\to X_j$ are \emph{epimorphisms};
+a functor defined by such an object is said to be \emph{strictly pro-representable}.
+We can thus further demand that $I$ be a filtered \emph{ordered} set, and that every epimorphism $X_i\to X'$ be equivalent to an epimorphism $X_i\to X_j$ for some suitable $j\in I$ (uniquely determined by this condition).
+Under these conditions, the projective system $(X_i)_{i\in I}$ is determined \emph{up to unique isomorphism} (in the usual sense of isomorphisms of projective systems).
+It thus follows that \emph{the projective limit of a projective system $\mathcal{X}^{(\alpha)}$ of strict pro-objects always exists in $\operatorname{Pro}(\mathcal{C})$}, and that, with the above notation of $F$ and $\overline{F}$, we have that
+\[
+    \overline{F}\varprojlim_\alpha\mathcal{X}^{(\alpha)}
+    = \varprojlim_\alpha{}_{\mathcal{C}'}F(X^{(\alpha)}).
+\]
+In particular, if every pro-object of $\mathcal{C}$ is strict (cf. the previous section), then the extended functor $\overline{F}$ commutes with projective limits.
+
+\subsection{Characterisation of pro-representable functors}\label{fga3.ii-a.3}
+
+Let $\mathcal{C}$ and $\mathcal{C}'$ be categories in which all finite projective limits (i.e. limits over finite, not necessarily filtered, preordered sets) exist, or, equivalently, in which finite products and finite fibred products exist (which implies, in particular, the exists of a "right-unit object" $e$ such that $\operatorname{Hom}(X,e)$ consists of only on element for all $X$).
+Let $F$ be a covariant functor from $\mathcal{C}$ to $\mathcal{C}'$.
+Then the following conditions are equivalent:
+
+\begin{enumerate}[i]
+    \item $F$ commutes with finite projective limits;
+    \item $F$ commutes with finite products and with finite fibred products;
+    \item $F$ commutes with finite products, and, for every exact diagram
+          \[
+              X\to X'\rightrightarrows X''
+          \]
+          in $\mathcal{C}$ (cf. FGA 3.I, A, Definition 2.1 \Cref{fga3.i-a.2-definition-2.1}), the image of the diagram under $F$
+          \[
+              F(X)\to F(X')\rightrightarrows F(X'')
+          \]
+          is exact.
+\end{enumerate}
+
+We then say that $F$ is \emph{left exact}.
+
+In what follows, we assume that finite projective limits always exist in $\mathcal{C}$.
+It is then immediate from the definitions that a representable functor is left exact, and, by taking the limit, that \emph{a pro-representable functor is left exact}.
+
+To obtain a converse, let
+\[
+    F\colon \mathcal{C} \to \mathtt{Set}
+\]
+be a covariant functor, and let $X\in\mathcal{C}$ and $\xi\in F(X)$.
+We say that $\xi$ (or the pair $(X,\xi)$) is \emph{minimal} if, for all $X'\in\mathcal{C}$ and all $\xi'\in F(X')$, and for every strict monomorphism (cf. FGA 3.I, §A.2 \Ref{fga3.i-a.2}) $u\colon X'\to X$ such that $\xi=F(u)(\xi')$, $u$ is an isomorphism.
+We also say that a pair $(X,\xi)$ \emph{dominates} $(X'',\xi'')$ (where $\xi\in F(X)$ and $\xi''\in F(X'')$) if there exists a morphism $v\colon X\to X''$ such that $\xi''=F(v)(\xi)$;
+\emph{if $\xi$ is minimal, and if $F$ is left exact, then this morphism $v$ is unique};
+\emph{if $\xi''$ is minimal, then $v$ is surjective}.
+From this we easily deduce the following proposition:
+
+\begin{proposition}\label{fga3.ii-a.3-proposition-3.1}
+    For $F$ to be strictly pro-representable, it is necessary and sufficient that it satisfy the following two conditions:
+    \begin{enumerate}[i]
+        \item $F$ is left exact; and
+        \item every pair $(X,\xi)$, with $\xi\in F(X)$, is dominated by some \emph{minimal} pair.
+    \end{enumerate}
+\end{proposition}
+
+
+This second condition is trivial if every object of $\mathcal{C}$ is Artinian (by taking a sub-object $X'$ of $X$ that is minimal amongst those for which there exists some $\xi'\in F(X')$ such that $\xi$ is the image of $\xi'$).
+Whence:
+
+\begin{corollary}\label{fga3.ii-a.3-proposition-3.1-corollary}
+    Let $\mathcal{C}$ be a category whose objects are all Artinian and in which all finite projective limits exist.
+    Then the pro-representable functors from $\mathcal{C}$ to $\mathtt{Set}$ are exactly the left exact functors, and they are in fact strictly pro-representable.
+\end{corollary}
+
+This last fact also implies that \emph{every pro-object of $\mathcal{C}$ is then strict}.
+
+
+\subsection{Example: groups of Galois type, pro-algebraic groups}\label{fga3.ii-a.4}
+
+If $\mathcal{C}$ is the category of ordinary finite groups, then $\operatorname{Pro}(\mathcal{C})$ is equivalent to the category of totally disconnected compact topological groups.
+\footnote{Here the word "Hausdorff" is implicit.}
+It is groups of this type, and their generalisations, obtained by replacing ordinary finite groups with schemes of finite groups over a given base prescheme (for example, finite algebraic groups over a field $k$), that serve as fundamental groups, homotopy groups, and absolute and relative homology groups for preschemes.
+In all these examples, the corollary to \Cref{fga3.ii-a.3-proposition-3.1} applies, and it is indeed by the associated functor that the $\pi_1$ should be defined [\Cref{fga2}].
+It is the same if we start with the category of algebraic or quasi-algebraic groups over a field (or, more generally, over a Noetherian prescheme): we recover the "\emph{pro-algebraic groups}" of Serre \cite{Ser1958}.
+
+\subsection{Example: "formal varieties"}\label{fga3.ii-a.5}
+
+Let $\Lambda$ be a Noetherian ring, $\mathcal{C}$ the category of $\Lambda$-algebras that are Artinian modules of finite type over $\Lambda$ (or, more concisely, \emph{Artinian $\Lambda$-algebras}).
+The conditions of the corollary to
+\Cref{fga3.ii-a.3-proposition-3.1} are then satisfied.
+Here, the category $\operatorname{Pro}(\mathcal{C})$ is equivalent to the category of \emph{topological algebras} $O$ over $\Lambda$ that are isomorphic to topological projective limits
+\[
+    O = \varprojlim O_i
+\]
+of algebras $O_i\in\mathcal{C}$, i.e. those whose topology is \emph{linear}, \emph{separated}, and \emph{complete}, and such that, for every open ideal $\mathfrak{J}_i$ of $O$, the algebra $O/\mathfrak{J}_i$ is an \emph{Artinian} algebra over $\Lambda$.
+The functor $\mathcal{C}\to\mathtt{Set}$ associated to such an algebra is exactly
+\[
+    \begin{aligned}
+        F(A)
+         & = h'_{O}(A)
+        \\&= \{\text{continuous homomorphisms of topological }\Lambda\text{-algebras }O\to A\}
+        \\&= \varinjlim_i \operatorname{Hom}_{\Lambda\text{-algebras}}(O_i,A).
+    \end{aligned}
+\]
+Note also that the category $\mathcal{C}$ is essentially the product of analogous categories, corresponding to the local rings that are the completions of the $\Lambda_{\mathfrak{m}}$ for the maximal ideals $\mathfrak{m}$ of $\Lambda$;
+we can thus, if so desired, restrict to the case where $A$ is such a complete local ring.
+In any case, $O$ decomposes canonically as the topological product of its \emph{local components}, which correspond to the "points" of the \emph{formal scheme} [\Cref{fga2}] defined by $O$.
+Such a point is defined by an object $\xi$ of some $F(K)$, where $K\in\mathcal{C}$ is a \emph{field} (for example, the residue field of the local component in question), and where two pairs $(\xi,K)$ and $(\xi',K')$ define the same point if and only if they are both dominated by the same $(\xi'',K'')$, or if they both dominate the same $(\xi''',K''')$.
+(If the ${\Lambda}/\mathfrak{m}$ are algebraically closed, then it suffices to take the set given by the sum of the $F({\Lambda}/\mathfrak{m})$).
+
+It is important to give conditions that ensure that the local component $O_\xi$ of $O$ corresponding to some $\xi\in F(K)$ be a \emph{Noetherian} ring.
+If $\Lambda$ is a complete local ring (Noetherian, we recall), then it is equivalent to say that $O_\xi$ is isomorphic to a \emph{quotient ring of a formal series ring $\Lambda[{[t_1,\ldots,t_n]}]$}.
+To give such a criterion, we introduce (for every ring $A$) the $A$-algebra $I_A$ of "dual numbers" of $A$, defined by
+\[
+    I_A
+    = A[t]/t^2A[t].
+\]
+Let $\varepsilon\colon I_A\to A$ be the augmentation homomorphism, which defines (if $A\in\mathcal{C}$) a map
+\[
+    F(\varepsilon)\colon F(I_A) \to F(A).
+\]
+Using the fact that $F$ is left exact, we intrinsically define the structure of an $A$-module on the subset
+\[
+    F(I_A,\xi)
+    = F(\xi)^{-1}(\xi) \subset F(I_A)
+\]
+consisting of the $\xi'\in F(I_A)$ that are "reducible along $\xi$";
+using the explicit form of $F$ in terms of $O$, we find that this $K$-module can be identified with $\operatorname{Hom}_\Lambda(\mathfrak{m}_{\xi}/\mathfrak{m}_\xi^2,A)$, where $m_\xi$ is the kernel of the homomorphism $\xi\colon O\to A$, i.e. if $A$ is a field, then the maximal ideal of the local component $O_\xi$ of $O$.
+From this, we immediately deduce the following proposition:
+
+\begin{proposition}\label{fga3.ii-a.5-proposition-5.1}
+    Let $\xi\in F(K)$, where $K\in\mathcal{C}$ is a field.
+    For the corresponding local component $O_\xi$ of $O$ to be a \emph{Noetherian} ring, it is necessary and sufficient that the set $F(I_K,\xi)$ of elements of $F(I_K)$ that are reducible along $\xi$ be a vector space of \emph{finite dimension} over $K$.
+    Under these conditions, we have a canonical isomorphism
+    \[
+        F(I_K,\xi)
+        = \operatorname{Hom}(\mathfrak{m}_{\xi}/\mathfrak{m}_\xi^2+\mathfrak{n}_\xi\mathcal{O}_\xi, K)
+    \]
+    (where $\mathfrak{n}_\xi$ is the maximal ideal of $\Lambda$ given by the kernel of the homomorphism $\Lambda\to K$), and so, in particular, the dimension of the $K$-vector space $F(I_K,\xi)$ is equal to the dimension of the vector space $\mathfrak{m}_{\xi}/\mathfrak{m}_\xi^2$ over the field $O_{\xi}/\mathfrak{m}_\xi=K(\xi)$.
+
+    \emph{[Comp.]}
+    The formula given above is only correct when $\Lambda$ is a field; in the general case, we must replace $\mathfrak{m}_{\xi}/\mathfrak{m}_\xi^2$ with the quotient of this space by the image of $\mathfrak{n}_{\xi}/\mathfrak{n}_\xi^2$, where $\mathfrak{n}$ is the maximal ideal of $\Lambda$.
+\end{proposition}
+
+
+Suppose that $O_\xi$ is Noetherian, and suppose, for notational simplicity, that $\Lambda$ is complete and local, and that $O=O_\xi$.
+(\emph{[Comp.]} The following definition is correct only when the residue extension $k'/k$ is \emph{separable}; for the general case, see \cite{Gro1960b}, III, 1.1].
+We say that \emph{$O$ is simple over $\Lambda$} if $O$ is a finite and étale algebra over the completion algebra of the localisation of $\Lambda[t_1,\ldots,t_n]$ at one of its maximal ideals that induces the maximal ideal of $\Lambda$;
+if the residue extension of $O$ over $\Lambda$ is trivial (for example, if the residue field of $\Lambda$ is algebraically closed), then this is equivalent to saying that $O$ itself is isomorphic to such a formal series algebra.
+Finally, if we no longer necessarily suppose that $O$ is Noetherian, then we again say that \emph{$O$ is simple over $\Lambda$} if $O$ is isomorphic to a topological projective limit of quotient $\Lambda$-algebras that are Noetherian and $\Lambda$-simple in the above sense.
+We can immediately generalise to the case where $\Lambda$ and $O$ are no longer assumed to be local.
+With this, we have the following proposition:
+
+
+\begin{proposition}\label{fga3.ii-a.5-proposition-5.2}
+    For $O$ to be simple over $\Lambda$, it is necessary and sufficient that the associated functor $F$ send epimorphisms to epimorphisms.
+\end{proposition}
+
+
+If this is the case, then this implies that, for every \emph{surjective} homomorphism $A\to A'$ in $\mathcal{C}$, the morphism $F(A)\to F(A')$ is also \emph{surjective}.
+Of course, it suffices to verify this condition in the case where $A$ is \emph{local}, and (proceeding step-by-step) where the ideal of $A$ given by the kernel of $A\to A'$ is annihilated by the maximal ideal of $A$.
+This leads, in practice, to verifying that a certain obstruction, linked to \emph{infinitesimal} invariants of the situation that give us a functor $F$, is null;
+this is a problem of a \emph{cohomological} nature.
+
+
+To finish, we say some words, in the above context, about \emph{rings of definition}.
+Let $F$ still be a functor from $\mathcal{C}$ to $\mathtt{Set}$, assumed to be pro-representable via a topological $\Lambda$-algebra $O$.
+Then, for every $A\in\mathcal{C}$ and every $\xi\in F(A)$, there exists a \emph{smallest} subring $A'$ of $A$ such that $\xi$ is the image of an element $\xi'$ of $F(A')$ (which is then uniquely determined):
+indeed, it suffices to think of $\xi$ as a homomorphism from $O$ to $A$, and to take $A'$ to be the image of $O$ under this $\xi$.
+We then say that $A'$ is the \emph{ring of definition of the object $\xi\in F(A)$}.
+If $u\colon A\to B$ is an algebra homomorphism, and if $\eta=F(u)(\xi)$, then the ring of definition of $\eta$ is the image under $u$ of the ring of definition of $\xi$.
+If we start with a functor $F$ from $\mathcal{C}$ to $\mathtt{Set}$, then the existence of rings of definition, along with their properties that we have just discussed, is more or less \emph{equivalent} to the condition that $F$ be pro-representable;
+that is, they are usually far from being trivial.

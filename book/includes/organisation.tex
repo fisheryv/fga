@@ -1,0 +1,31 @@
+% !TeX root = ../../infdesc.tex
+
+%
+% Contents and indices
+%
+
+% Contents
+\setcounter{tocdepth}{1}
+
+% Indices
+\indexsetup{%
+    othercode={
+        \fancyhead[RE]{{\color{hdcol}\fontfamily{bch}\itshape \indexname}}
+        \fancyhead[LO]{{\color{hdcol}\fontfamily{bch}\itshape \indexname}}
+        \fancyhead[RO,LE]{\thepage}\fancyfoot[C]{\thepage}
+    }
+}
+
+%
+% Transitions
+%
+
+% Counter to make updating filenames easier
+\newcommand{\currentchapter}{}
+
+% Commands to be executed at the beginning of each section
+\newcommand{\secbegin}[1]{%
+    \label[section]{#1}
+    \hintsection{\Cref*{#1}}
+}
+

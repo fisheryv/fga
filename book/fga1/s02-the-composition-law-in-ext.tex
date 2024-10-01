@@ -1,0 +1,83 @@
+% !TeX root = ../../fga.tex
+\section{The composition law in $\operatorname{Ext}$}\label{fga1-2}
+
+The results of this section are due, independently, to Cartier and Yoneda;
+see a talk by Cartier \cite{Car1957} for more details.
+Let $\mathcal{C}$ be an abelian category, and let $K$ and $L$ be two graded objects of $\mathcal{C}$.
+We denote by $\operatorname{Hom}(K,L)$ the graded abelian group whose degree-$n$ component consists of homogeneous homomorphisms of degree $n$ from $K$ to $L$ (i.e. systems $(u_i)$ of homomorphisms $K^i\to L^{i+n}$).
+If $K$ and $L$ are complexes (with differentials of degree $+1$, to fix conventions), then we endow $\operatorname{Hom}(K,L)$ with the differential operator given by
+
+\begin{equation}\tag{2.1}\label{fga1-equation-2.1}
+  \delta(u) = \mathrm{d}u + (-1)^{n+1}u\mathrm{d} \quad\text{where }n=\deg(u)
+\end{equation}
+
+which makes it a complex with a differential of degree $+1$.
+The cycles of degree $n$ are the maps of degree $n$ that anticommute with $u$ (as homogeneous maps).
+We can then consider $\operatorname{H}^\bullet(\operatorname{Hom}(K,L))$, which is an invariant of the homotopy types of $K$ and $L$, and which we sometimes denote by $\operatorname{H}^\bullet(K,L)$.
+If we have a third complex $M$, then the composition of homomorphisms defines a pairing $\operatorname{Hom}(K,L)\times\operatorname{Hom}(L,M)\to\operatorname{Hom}(K,M)$ which is compatible with the differential maps, whence, by passing to the cohomology of pairings,
+
+\begin{equation}\tag{2.2}\label{fga1-equation-2.2}
+  \operatorname{H}^\bullet(K,L)\times\operatorname{H}^\bullet(L,M) \to \operatorname{H}^\bullet(K,M)
+\end{equation}
+
+which we write as $(u,v)\mapsto vu$.
+These pairings satisfy an evident associativity property;
+in particular, $\operatorname{H}^\bullet(K,K)$ is an associative graded unital ring, and $\operatorname{H}^\bullet(K,L)$ (resp. $\operatorname{H}^\bullet(L,K)$) is a graded right (resp. left) module over this ring, etc.
+In dimension $0$, \Cref{fga1-equation-2.2} reduces to the composition of permissible homomorphisms of complexes.
+Finally, an exact sequence of complexes $0\to K'\to K\to K''\to0$ such that, for all $i$, $K'^i$ can be identified with a direct factor of $K^i$, gives rise to an exact sequence of complexes of groups $\operatorname{Hom}(K'',L)$, etc., whence a coboundary map $\operatorname{H}^i(K',L)\to\operatorname{H}^{i+1}(K'',L)$.
+We similarly define the boundary maps relative to an exact sequence in $L$.
+The pairings in \Cref{fga1-equation-2.2} are compatible, in the usual sense, with these coboundary maps.
+
+Now suppose that $\mathcal{C}$ is a category such that every element $A$ of $\mathcal{C}$ admits an injective resolution $C(A)$.
+We then note that, using one of the many variants of the theorem of bicomplexes,
+\[\operatorname{H}^\bullet(C(A),C(B)) = \operatorname{H}^\bullet(\operatorname{Hom}(C(A),C(B)))\]
+is canonically isomorphic to
+\[\operatorname{H}^\bullet(\operatorname{Hom}(A,C(B))) = \operatorname{Ext}^\bullet(A,B)\]
+The coboundary maps described above give coboundary maps of the $\operatorname{Ext}$.
+Furthermore, the pairings in \Cref{fga1-equation-2.2} give associative pairings here:
+
+\begin{equation}\tag{2.3}\label{fga1-equation-2.3}
+  \operatorname{Ext}^\bullet(A,B)\times\operatorname{Ext}^\bullet(B,C) \to \operatorname{Ext}^\bullet(A,C)
+\end{equation}
+
+
+and these are compatible with the coboundary maps.
+In particular, $\operatorname{Ext}^\bullet(A,A)$ is an associative graded unital ring, etc.
+(We can show in an analogous manner that the $\operatorname{Ext}$ functors behave like derived functors of an arbitrary functor;
+we do not make use of this fact here).
+
+In the case where the category in question is the category $\mathcal{C}^\mathcal{O}$ of $\mathcal{O}$-modules on $X$, we then obtain pairings
+
+
+\begin{equation}\tag{2.4}\label{fga1-equation-2.4}
+  \operatorname{Ext}_\mathcal{O}^p(X;\mathcal{A},\mathcal{B})\times\operatorname{Ext}_\mathcal{O}^q(X;\mathcal{B},\mathcal{C}) \to \operatorname{Ext}_\mathcal{O}^{p+q}(X;\mathcal{A},\mathcal{C})
+\end{equation}
+
+
+that can be calculated as already described.
+The same method, but replacing the category of abelian groups with the category of abelian sheaves on $X$, and the $\operatorname{Hom}$ functors by the $\mathcal{H}om$ functors, again defines pairings, having the same formal properties, and of a "local nature" this time:
+
+\begin{equation}\tag{2.5}\label{fga1-equation-2.5}
+  \mathcal{E}xt_\mathcal{O}^p(\mathcal{A},\mathcal{B})\times\mathcal{E}xt_\mathcal{O}^q(\mathcal{B},\mathcal{C}) \to \mathcal{E}xt_\mathcal{O}^{p+q}(\mathcal{A},\mathcal{C})
+\end{equation}
+
+
+These can be understood by noting that the homomorphisms in \Cref{fga1-equation-1.8} are compatible with the pairings between the $\operatorname{Ext}$.
+
+Finally, recall that we also have a multiplicative structure between functors $\operatorname{H}^p(X,A)$, namely the cup product.
+We note then that the spectral sequences of \Cref{fga1-proposition-1} are compatible with the multiplicative structures;
+more precisely, we have a pairing from the spectral sequence $E(A,B)$ with the spectral sequence $E(B,C)$ to the spectral sequence $E(A,C)$ that abuts to the pairing between the global $\operatorname{Ext}$, and whose initial page comes from the cup product and the local $\operatorname{Ext}$ pairings in the right-hand side of \Cref{fga1-equation-1.4}.
+It then follows, in particular, that the "boundary homomorphisms"
+
+
+\begin{equation}\tag{2.6}\label{fga1-equation-2.6}
+  \operatorname{Ext}_\mathcal{O}^n(X;\mathcal{A},\mathcal{B}) \to \operatorname{H}^0(X;\mathcal{E}xt_\mathcal{O}^n(\mathcal{A},\mathcal{B}))
+\end{equation}
+
+\begin{equation}\tag{2.7}\label{fga1-equation-2.7}
+  \operatorname{H}^n(X,\mathcal{H}om_\mathcal{O}(\mathcal{A},\mathcal{B})) \to \operatorname{Ext}_\mathcal{O}^n(X;\mathcal{A},\mathcal{B})
+\end{equation}
+
+
+are compatible with the multiplicative structures.
+So, if we restrict to sheaves that are locally isomorphic to some $\mathcal{O}^m$, then this completely explains the composition of the global $\operatorname{Ext}$ by means of the cup product, taking into account the isomorphisms of \Cref{fga1-equation-1.5}.

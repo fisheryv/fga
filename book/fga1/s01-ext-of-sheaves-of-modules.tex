@@ -1,0 +1,88 @@
+% !TeX root = ../../fga.tex
+\section{$\operatorname{Ext}$ of sheaves of modules}\label{fga1-1}
+
+\emph{(cf. [\cite{Gro1957}, Chapters 3 and 4])}
+
+Let $X$ be a topological space endowed with a sheaf $\mathcal{O}$ of unital (but not necessarily commutative) rings.
+We consider the abelian category $\mathcal{C}^\mathcal{O}$ of sheaves of $\mathcal{O}$-modules, which are also referred to as $\mathcal{O}$-modules.
+We know that every object of this category admits an injective resolution, which allows us to define the $\operatorname{Ext}$ functors that have the well-known formal properties.
+More precisely, to avoid confusion, we denote by $\operatorname{Hom}_\mathcal{O}(X;\mathcal{A},\mathcal{B})$, or simply $\operatorname{Hom}(X;\mathcal{A},\mathcal{B})$, the abelian \emph{groups} of $\mathcal{O}$-homomorphisms from $\mathcal{A}$ to $\mathcal{B}$, whereas $\mathcal{H}om_\mathcal{O}(\mathcal{A},\mathcal{B})$ denotes the \emph{sheaf} of germs of homomorphisms from $\mathcal{A}$ to $\mathcal{B}$ (where $\mathcal{A},\mathcal{B}\in\mathcal{C}^\mathcal{O}$).
+We define, for fixed $\mathcal{A}\in\mathcal{C}^\mathcal{O}$, functors $h_\mathcal{A}$ and $\underline{h}_\mathcal{A}$, with values in the category $\mathcal{C}$ of abelian groups and the category $\mathcal{C}^Z$ of abelian sheaves on $X$ (respectively), by the formulas:
+
+\begin{equation}\tag{1.1}\label{fga1-equation-1.1}
+    \begin{aligned}
+        h_\mathcal{A}(\mathcal{B})             & = \operatorname{Hom}_\mathcal{O}(X;\mathcal{A},\mathcal{B}) \\
+        \underline{h}_\mathcal{A}(\mathcal{B}) & = \mathcal{H}om_\mathcal{O}(\mathcal{A},\mathcal{B})
+    \end{aligned}
+\end{equation}
+
+The functors $h_\mathcal{A}$ and $\underline{h}_\mathcal{A}$ are left exact and covariant, and so we consider their right-derived functors, denoted by $\operatorname{Ext}_\mathcal{O}^p(X;\mathcal{A},\mathcal{B})$ and $\mathcal{E}xt_\mathcal{O}^p(\mathcal{A},\mathcal{B})$ (respectively).
+We then have, by definition,
+
+\begin{equation}\tag{1.2}\label{fga1-equation-1.2}
+    \begin{aligned}
+        \operatorname{Ext}_\mathcal{O}^p(X;\mathcal{A},\mathcal{B}) & = (\operatorname{R}^p h_\mathcal{A})(\mathcal{B})             & = \operatorname{H}^p(\operatorname{Hom}_\mathcal{O}(X;\mathcal{A},C(\mathcal{B}))) \\
+        \mathcal{E}xt_\mathcal{O}^p(\mathcal{A},\mathcal{B})   & = (\operatorname{R}^p \underline{h}_\mathcal{A})(\mathcal{B}) & = \operatorname{H}^p(\mathcal{H}om_\mathcal{O}(\mathcal{A},C(\mathcal{B})))
+    \end{aligned}
+\end{equation}
+
+
+where $\operatorname{R}^p$ denotes the passage to right-derived functors, and where $C(\mathcal{B})$ denotes an arbitrary injective resolution of $\mathcal{B}$ in $\mathcal{C}^\mathcal{O}$.
+We denote by $\operatorname{G_a}mma\colon\mathcal{C}^Z\to\mathcal{C}$ the "sections" functor;
+recall that its right-derived functors are denoted by $B\mapsto\operatorname{H}^p(X,\mathcal{B})$:
+
+\begin{equation}\tag{1.3}\label{fga1-equation-1.3}
+    \operatorname{H}^p(X,\mathcal{B}) = (\operatorname{R}^p\operatorname{G_a}mma)(\mathcal{B}) = \operatorname{H}^p(\operatorname{G_a}mma(C(\mathcal{B})))
+\end{equation}
+
+We evidently have $h_\mathcal{A}=\operatorname{G_a}mma\underline{h}_\mathcal{A}$;
+we can also show that $\underline{h}_\mathcal{A}$ sends injective objects to $\operatorname{G_a}mma$-acyclic objects.
+From this, it is a well-known result that:
+
+\begin{proposition}\label{fga1-proposition-1}
+    For every $\mathcal{O}$-module $\mathcal{A}$, there exists a cohomological spectral functor on $\mathcal{C}^\mathcal{O}$ that abuts to the graded functor $(\operatorname{Ext}_\mathcal{O}^\bullet(X;\mathcal{A},\mathcal{B}))$, and whose initial page is
+    \begin{equation}\tag{1.4}\label{fga1-equation-1.4}
+        E_2^{p,q}(\mathcal{A},\mathcal{B})= \operatorname{H}^p(X,\operatorname{Ext}_\mathcal{O}^q(\mathcal{A},\mathcal{B}))
+    \end{equation}
+\end{proposition}
+
+From this, we obtain "\emph{boundary homomorphisms}", as well as a short exact sequence, which we will not write.
+
+\begin{corollary}\label{fga1-proposition-1-corollary-1}
+    If $\mathcal{A}$ is locally isomorphic to $\mathcal{O}^n$, then we have canonical isomorphisms
+    \begin{equation}\tag{1.5}\label{fga1-equation-1.5}
+        \operatorname{Ext}_\mathcal{O}^p(X;\mathcal{A},\mathcal{B}) \xleftarrow{\sim} \operatorname{H}^p(x,\mathcal{H}om_\mathcal{O}(\mathcal{A},\mathcal{B}))
+    \end{equation}
+    (given by the boundary homomorphisms of the spectral sequence). In particular, we have a canonical isomorphism
+    \begin{equation}\tag{1.6}\label{fga1-equation-1.6}
+        \operatorname{Ext}_\mathcal{O}^p(X;\mathcal{O},\mathcal{B}) = \operatorname{H}^p(X,\mathcal{B})
+    \end{equation}
+\end{corollary}
+
+
+To use these results, we need to know how to explicitly describe the $\operatorname{Ext}_\mathcal{O}^p(\mathcal{A},\mathcal{B})$.
+They are functors that we calculate locally, i.e. if $U$ is an open subset of $X$, then
+\[\mathcal{E}xt_\mathcal{O}^p(\mathcal{A},\mathcal{B})|U = \mathcal{E}xt_{\mathcal{O}|U}^p(\mathcal{A}|U,\mathcal{B}|U)\]
+as follows from the fact that the restriction to $U$ of an injective $\mathcal{O}$-module is an injective $(\mathcal{O}|U)$-module.
+Furthermore, for fixed $x\in X$, we have functorial homomorphisms
+\begin{equation}\tag{1.7}\label{fga1-equation-1.7}
+    \mathcal{H}om_\mathcal{O}(\mathcal{A},\mathcal{B})_x \to \operatorname{Hom}_{\mathcal{O}_x}(\mathcal{A}_x,\mathcal{B}_x)
+\end{equation}
+that uniquely extend to homomorphisms of cohomological functors (in $\mathcal{B}$):
+\begin{equation}\tag{1.8}\label{fga1-equation-1.8}
+    \mathcal{E}xt_\mathcal{O}^p(\mathcal{A},\mathcal{B})_x \to \operatorname{Ext}_{\mathcal{O}_x}^p(\mathcal{A}_x,\mathcal{B}_x)
+\end{equation}
+
+\begin{proposition}\label{fga1-proposition-2}
+    If $\mathcal{A}$ is isomorphic, in a neighbourhood of $x$, to the cokernel of some homomorphism $\mathcal{O}^m\to\mathcal{O}^n$, then \Cref{fga1-equation-1.7} is an isomorphism for all $p$. This is the case, in particular, if $\mathcal{A}$ is a coherent $\mathcal{O}$-module \cite{Ser1955}.
+\end{proposition}
+
+\begin{proposition}\label{fga1-proposition-3}
+    Let $\mathcal{L}_\bullet=(\mathcal{L}_i)$ be a left resolution of the $\mathcal{O}$-module $\mathcal{A}$ by $\mathcal{O}$-modules that are all locally isomorphic to some $\mathcal{O}^n$. Then $\operatorname{Ext}_\mathcal{O}(\mathcal{A},\mathcal{B})$ can be identified with $\operatorname{H}^\bullet(\mathcal{H}om_\mathcal{O}(\mathcal{L}_\bullet,\mathcal{B}))$, and $\operatorname{Ext}_\mathcal{O}(X;\mathcal{A},\mathcal{B})$ can be identified with the hypercohomology of $X$ with respect to the complex $\mathcal{H}om_\mathcal{O}(\mathcal{L}_\bullet,\mathcal{B})$.
+\end{proposition}
+
+\begin{cproof}
+    The proof is standard: we consider the bicomplex $\mathcal{H}om_\mathcal{O}(\mathcal{L}_\bullet,C(\mathcal{B}))$, where $C(\mathcal{B})$ is an injective resolution of $\mathcal{B}$, as well as the natural homomorphisms into this bicomplex from $\mathcal{H}om_\mathcal{O}(\mathcal{L}_\bullet,\mathcal{B})$ and $\mathcal{H}om_\mathcal{O}(\mathcal{A},C(\mathcal{B}))$.
+\end{cproof}
+
+To finish, we note that the two $\operatorname{Ext}$ functors introduced in \Cref{fga1-equation-1.2} are not only cohomological functors in $\mathcal{B}$, but in fact \emph{cohomological bifunctors}, covariant in $\mathcal{B}$, and contravariant in $\mathcal{A}$.

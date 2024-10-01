@@ -1,0 +1,107 @@
+% !TeX root = ../../fga.tex
+\section{The duality theorem for singular varieties}\label{fga1-6}
+
+
+Let $X$ be a closed subset of dimension $n$ of the projective space $\mathbf{P}$ of dimension $r$.
+\Cref{fga1-equation-5.6} can then be written as
+
+\begin{equation}\tag{6.1}\label{fga1-equation-6.1}
+  \operatorname{H}^n(X,\mathcal{F})'
+  \simeq \operatorname{Hom}_{\mathcal{O}_X}(X;\mathcal{F},\omega_X^n)
+  = \operatorname{Ext}_{\mathcal{O}_X}^0(X;\mathcal{F},\omega_X^n)
+\end{equation}
+
+where we set
+\footnote{This equation is labelled (6.2) in the original, but this seems to be a typo, since a later equation shares the same number, and any references to (6.2) seem to indeed point to the later equation instead of this one.}
+\[
+  \omega_X^n
+  = E^0(\mathcal{O}_X)
+  = \mathcal{E}xt_{\mathcal{O}_\mathbf{P}}^{r-n}(\mathcal{O}_X,\Omega_\mathbf{P}^r).
+\]
+As mentioned in \Cref{fga1-proposition-5}, the sheaf thus defined does not depend on the chosen immersion of $X$ into the non-singular variety $\mathbf{P}$.
+Taking $\mathcal{F}=\omega_X^n$ in \Cref{fga1-equation-6.1}, we find that
+
+\begin{equation}\tag{6.2}\label{fga1-equation-6.2}
+  \operatorname{H}^n(X,\omega_X^n)'
+  \simeq \operatorname{Hom}_{\mathcal{O}_X}(X;\omega_X^n,\omega_X^n)
+\end{equation}
+
+whence the existence of a distinguished element in $\operatorname{H}^n(X,\omega_X^n)$, corresponding to the identity morphism from $\omega_X^n$ to itself:
+
+\begin{equation}\tag{6.3}\label{fga1-equation-6.3}
+  \eta\colon \operatorname{H}^n(X,\Omega_X^n) \to k
+\end{equation}
+
+Then consider the pairings defined by the composition of the $\operatorname{Ext}$:
+
+\begin{equation}\tag{6.4}\label{fga1-equation-6.4}
+  \operatorname{H}^p(X,\mathcal{F}) \times \operatorname{Ext}_{\mathcal{O}_X}^{n-p}(X;\mathcal{F},\omega_X^n)
+  \to \operatorname{H}^n(X,\omega_X^n)
+\end{equation}
+
+and compose them with the homomorphism $\eta$ in \Cref{fga1-equation-6.3}; we thus obtain functorial homomorphisms
+
+\begin{equation}\tag{6.5}\label{fga1-equation-6.5}
+  \operatorname{Ext}_{\mathcal{O}_X}^{n-p}(X;\mathcal{F},\omega_X^n) \to \operatorname{H}^p(X,\mathcal{F})'
+\end{equation}
+
+which are compatible with the boundary maps (generalising \Cref{fga1-equation-5.2}).
+We can prove that, for $p=n$, we thus obtain the isomorphism in \Cref{fga1-equation-6.1}.
+With this, we have:
+
+
+\begin{theorem}\label{fga1-theorem-3bis}
+  For any given integer $k\geqslant0$, the four following conditions on $X$ are equivalent:
+  \begin{enumerate}[i.]
+    \item The functorial homomorphism in \Cref{fga1-equation-6.5} is an isomorphism for $n-k\leqslant p\leqslant n$.
+    \item $\operatorname{H}^p(X,\mathcal{O}_X(-m)) = 0$ for $n-k\leqslant p<n$ and large enough $m$.
+    \item The functor $\operatorname{H}^p(X,\mathcal{F})$ on the category of coherent algebraic sheaves on $X$ is coeffaceable for $n-k\leqslant p<n$.
+    \item $E^i(\mathcal{O}_X) = \mathcal{E}xt_{\mathcal{O}_\mathbf{P}}^{r-n+i}(\mathcal{O}_X,\omega_\mathbf{P}^r) = 0$ for $0<i\leqslant k$.
+  \end{enumerate}
+\end{theorem}
+
+
+\begin{cproof}
+  (i)$\implies$(ii) by \Cref{fga1-lemma-4};
+  (ii)$\implies$(iii) by \Cref{fga1-lemma-3};
+  (iii)$\implies$(i) by a well-known standard argument, taking into account the fact that the two sides of \Cref{fga1-equation-6.5} are then coeffaceable functors for $n-k\leqslant p<n$ (the first being so by \Cref{fga1-lemma-4});
+  finally, (ii)$\iff$(iv) follows from the corollary to Proposition 6 \Cref{fga1-proposition-6-corollary}.
+\end{cproof}
+
+\begin{proposition}\label{fga1-proposition-6}
+  Let $\mathcal{F}$ be a coherent algebraic sheaf on $X$, and let $i$ be an integer.
+  Then, for large enough $m$, we have an isomorphism
+  \begin{equation}\tag{6.6}\label{fga1-equation-6.6}
+    \operatorname{H}^i(X,\mathcal{F}(-m))' \simeq \operatorname{H}^0(X,E^{n-i}(\mathcal{F})(m))
+  \end{equation}
+  where we set
+  \begin{equation}\tag{6.7}\label{fga1-equation-6.7}
+    E^j(\mathcal{F}) = \mathcal{E}xt_{\mathcal{O}_\mathbf{P}}^{r-n+j}(\mathcal{F},\Omega_\mathbf{P}^r)
+  \end{equation}
+  (compare with \Cref{fga1-proposition-5} in \Cref{fga1-3}).
+\end{proposition}
+
+
+\begin{cproof}
+  Indeed, by the duality theorem for $\mathbf{P}$, the left-hand side of \Cref{fga1-equation-6.6} is isomorphic to $\operatorname{Ext}_{\mathcal{O}_\mathbf{P}}^{r-i}(\mathbf{P};\mathcal{F}(-m),\Omega_\mathbf{P}^r)$, and so \Cref{fga1-equation-6.6} follows from \Cref{fga1-lemma-5}.
+\end{cproof}
+
+
+\begin{corollary}\label{fga1-proposition-6-corollary}
+  For $\operatorname{H}^i(X,\mathcal{F}(-m))$ to be zero for large enough $m$, it is necessary and sufficient that $E^{n-i}(\mathcal{F})$ be zero.
+\end{corollary}
+
+
+
+Recall that the $E^j(\mathcal{F})$ do not depend on the projective immersion in question.
+The condition of the corollary is purely local, and so, if it is satisfied for $\mathcal{F}$, then it is also satisfied for every sheaf that is locally isomorphic to some $\mathcal{F}^n$.
+In particular, if this condition is satisfied for $\mathcal{O}_X$, then it is satisfied for every locally-free coherent algebraic sheaf.
+This is the case, for example, for all $i<n$ if $X$ is non-singular;
+and for $i=0$ if no component of $X$ consists of a single point;
+and for $i=0,1$ if $S$ is normal and all its components are of dimension $>1$ (see \cite{Ser1955}).
+For it to be satisfied for $i<k$, it is necessary and sufficient, by definition, that the local rings $\mathcal{O}_x$ (for $x\in X$) be of "homological codimension $\geqslant k$" (see \cite{Ser1956a} for details on this notion).
+If $k=n$, then this implies, by \Cref{fga1-theorem-3bis}, that the duality theorem is true for $X$, i.e. that \Cref{fga1-equation-6.5} is an isomorphism for all $p$ and for all $\mathcal{F}$.
+We can give many equivalent conditions on the local rings $\mathcal{O}_x$ for this to be the case (Nagata);
+for example, those that satisfy the Cohen-Macaulay equidimensionality theorem.
+It is also the case, for example, if $X$ is locally a "complete intersection" in a non-singular ambient variety.
+

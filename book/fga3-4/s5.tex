@@ -1,0 +1,137 @@
+% !TeX root = ../../fga.tex
+\section{Differential study of Hilbert schemes}\label{fga3.iv-5}
+
+We have the following result:
+
+\begin{proposition}\label{fga3.iv-5-proposition-5.1}
+  Let $S$ be a prescheme, $S_0$ a subprescheme defined by a square-zero quasi-coherent ideal $\mathcal{I}$, $X$ an $S$-prescheme, and $\mathcal{F}$ a quasi-coherent module on $X$.
+  Let $X_0=\mathcal{F}\times_S S_0$ and $\mathcal{F}_0=\mathcal{F}\otimes_{\mathcal{O}_S}\mathcal{O}_{S_0}$.
+  Finally, let $\mathcal{G}_0=\mathcal{F}_0/\mathcal{H}_0$ be a quasi-coherent quotient module of $\mathcal{F}_0$ that is flat over $S_0$.
+  For every open $U$ of $X$, let $\mathcal{E}(U)$ be the set of quasi-coherent quotient modules $\mathcal{G}$ of $\mathcal{F}|U$ that are flat over $S$ and are such that $\mathcal{G}\otimes_{\mathcal{O}_S}\mathcal{O}_{S_0}=\mathcal{G}_0$;
+  as $U$ varies, the $\mathcal{E}(U)$ are the sections of a sheaf $\mathcal{E}$ on $U$.
+  With this, the sheaf of groups
+  \[
+    \mathcal{A}
+    = \underline{\operatorname{Hom}}_{\mathcal{O}_{X_0}}(\mathcal{H}_0,\mathcal{G}_0\otimes_{\mathcal{O}_{S_0}}\mathcal{I})
+  \]
+  acts naturally on $\mathcal{E}$, which thus becomes a "formally $\mathscr{A}$-principal homogeneous" sheaf (i.e. for every open $U$ in $X$, $\mathcal{E}(U)$ is either empty or an $\mathcal{A}(U)$-principal homogeneous set).
+\end{proposition}
+
+We thus conclude:
+
+
+\begin{corollary}\label{fga3.iv-5-corollary-5.2}
+  Suppose that there exists locally on $X$ an extension $\mathcal{G}$ of $\mathcal{G}_0$ to a quotient of $\mathcal{F}$ that is flat over $S$ (i.e. that the fibres of the sheaf $\mathcal{E}$ are non-empty).
+  Then there exists a canonical obstruction class
+  \[
+    c(\mathcal{G}_0) \in \operatorname{H}^1(X,\mathcal{A})
+  \]
+  whose vanishing is necessary and sufficient for the existence of a global extension $\mathcal{G}$ of $\mathcal{G}_0$ to a quotient of $\mathcal{F}$ that is flat over $S$.
+  If this class is zero, then the set $\mathcal{E}(X)$ of all possible extensions is a principal homogenous set for $\mathcal{A}(X)=\operatorname{Hom}_{\mathcal{O}_X}(\mathcal{H}_0,\mathcal{G}_0\otimes_{\mathcal{O}_{S_0}}\mathcal{I})$.
+\end{corollary}
+
+
+The existence of a global extension is thus guaranteed, in particular, if $\operatorname{H}^1(X,\mathcal{A})=0$.
+
+
+\begin{corollary}\label{fga3.iv-5-corollary-5.3}
+  Suppose that $Q=\underline{\operatorname{Quot}}_\mathcal{F}/X/S$ exists (cf. §4.a \Cref{fga3.iv-4}) --- for example, suppose that $X$ is quasi-projective over some locally Noetherian $S$, and $\mathcal{F}$ is coherent.
+  Let $x\in Q$, corresponding to a residue extension $K=k(x)$ of some $k(s)$ (where $s\in S$).
+  Then $x$ is defined by a coherent quotient module $\mathcal{G}_0=\mathcal{F}_0/\mathcal{H}_0$ of the module $\mathcal{F}_0=F_K$ on the $K$-prescheme $X_K$.
+  Let $\mathcal{A}$ be the coherent sheaf on $X_K$ defined by
+  \[
+    \mathcal{A} = \underline{\operatorname{Hom}}_{\mathcal{O}_{X_0}}(\mathcal{H}_0,\mathcal{G}_0).
+  \]
+
+  Then the Zariski tangent space of the fibre $Q_s$ at the point $x$ (given by the dual over $K$ of $\mathfrak{m}/\mathfrak{m}^2$, where $\mathfrak{m}$ is the maximal ideal of $\mathcal{O}_{Q_k,x}$) is canonically isomorphic to $\operatorname{H}^0(X_k,\mathcal{A})$.
+\end{corollary}
+
+
+The result giving the Zariski tangent space can be generalised, and gives a characterisation, for a given $S$-morphism $g\colon S'\to Q$, i.e. a section $g'$ of $Q'=Q\times_S S'$ over $S'$, of the module
+\[
+  \Omega
+  = g^*(\Omega_{Q/S}^1)
+  = {g'}^*(\mathcal{J}/\mathcal{J}^2)
+\]
+(where $\mathcal{J}$ is the ideal on $Q'$ defined by the section $g'$ of $Q'$ over $S'$) by the formula
+\[
+  \operatorname{Hom}_{\mathcal{O}_{S'}}(\Omega,\mathcal{M})
+  \simeq \operatorname{H}^0(X',\mathcal{A})
+\]
+which is functorial in the coherent module $\mathcal{M}$ over $S'$, and where $\mathcal{A}$ is again the module on $X'=X\times_S S'$ defined by
+\[
+  \mathcal{A} = \underline{\operatorname{Hom}}_{\mathcal{O}_{X'}}(\mathcal{H},\mathcal{G}\otimes_{\mathcal{O}_S}\mathcal{M})
+\]
+($\mathcal{G}=\mathcal{F}'/\mathcal{H}$ being the quotient module of $\mathcal{F}'=\mathcal{F}\otimes_{\mathcal{O}_S}\mathcal{O}_{S'}$ that corresponds to $g$).
+It suffices to apply \Cref{fga3.iv-5-proposition-5.1} by replacing $S_0$ with $S'$, and $S$ with the prescheme $D(\mathcal{M})=(S',\mathcal{O}_{S'}+\mathcal{M})$, where $\mathcal{M}$ is considered as a square-zero ideal.
+
+If, in \Cref{fga3.iv-5-proposition-5.1}, we have $\mathcal{F}=\mathcal{O}_X$, then the data of $\mathcal{G}_0$ corresponds to the data of a closed subprescheme $Y_0$ of $X_0$ that is flat over $S_0$, defined by the ideal $\mathcal{J}_0=\mathcal{M}_0$, and then \Cref{fga3.iv-3-equation-star} gives
+\[
+  \mathcal{A}
+  = \underline{\operatorname{Hom}}_{\mathcal{O}_{X_0}}(\mathcal{J}_0/\mathcal{J}_0^2,\mathcal{O}_{Y_0}\otimes_{\mathcal{O}_{S_0}}\mathcal{J})
+\]
+where $\mathcal{J}/\mathcal{J}^2$ is thought of as the \emph{conormal sheaf} of $Y_0$ in $X_0$, which we also denote by $\mathcal{N}_{Y_0/X_0}$;
+it is then interesting to consider $\mathcal{A}$ as a module over $Y_0$, and to calculate $\operatorname{H}^0$ and $\operatorname{H}^1$ on $Y$.
+If $Y_0$ is locally a complete intersection in $X_0$, with $X$ flat over $S$, then, in \Cref{fga3.iv-5-proposition-5.1}, the possibility of a local extension is guaranteed, and $\mathcal{J}/\mathcal{J}^2$ is locally free over $Y_0$ and we can write
+\[
+  \mathcal{A} = \check{\mathcal{N}}_{X_0/Y_0}\otimes_{\mathcal{O}_{S_0}}\mathcal{J}
+\]
+where the first factor on the right-hand side is the normal cone of $Y_0$ inside $X_0$.
+Using the fundamental criterion of simplicity \cite{Gro1960b}, III, 3.1, we find, for example:
+
+
+\begin{corollary}\label{fga3.iv-5-corollary-5.4}
+  Under the conditions of \Cref{fga3.iv-5-corollary-5.3}, suppose that $\mathcal{F}=\mathcal{O}_X$, with $X$ flat over $S$, and that the closed subprescheme $Y_0$ of $X_0$ that corresponds to $\mathcal{G}_0$ is locally a complete intersection.
+  Then the Zariski tangent space of $Q_s$ at $x$ is canonically isomorphic to $\operatorname{H}^0(Y_0,\check{\mathcal{N}}_{X_0/Y_0})$.
+  If $\operatorname{H}^1(Y_0,\check{\mathcal{N}_{X_0/Y_0}})=0$, then the Hilbert prescheme $X$ is simple over $S$ at the point $x$ (where $\check{\mathcal{N}}_{X_0/Y_0}$ is the normal sheaf of $Y_0$ inside $X_0$).
+\end{corollary}
+
+\begin{remark}\label{fga3.iv-5-remark-5.5}
+  This statement applies in particular when $Y_0$ is a complete intersection in $X_0$ defined by \emph{one} single equation, i.e. is a positive "Cartier divisor".
+  Then $\check{\mathcal{N}}_{X_0/Y_0}$ is isomorphic to the sheaf on $Y_0$ induced by the invertible sheaf $\mathcal{J}^{-1}$ on $X_0$ defined by the divisor $Y_0$.
+  This is the situation that we find in particular in the study of families of positive divisors on a non-singular projective variety $X_0$.
+  The isomorphism between the Zariski tangent space at the point $x$ of $Q$ (or, if one prefers, of the open $D$ of $Q$ that corresponds to the divisors) and $\mathcal{H}^0(Y_0,\check{\mathcal{N}}_{X_0/Y_0})$ was known in classical algebraic geometry under the name of "*characteristic homomorphism*" (from the former to the latter).
+  It was not defined when $x$ was a simple point of the variety of parameters $T$ of a "complete continuous family" of divisors, i.e. from our point of view, of an irreducible component of the scheme $D$, endowed with the induced \emph{reduced} structure.
+  The tangent space of $T$ at $x$ is then a \emph{subspace} of the tangent space of $D$ at $x$, and so the characteristic homomorphic of yore is indeed injective, but it is not surjective except for under supplementary conditions, for example if $D$ is integral at $x$.
+  In fact, Zappa \cite{Zap1945} constructed an example (with $X$ a non-singular projective surface over the \emph{field of complex numbers}) where even at the generic point of $T$ the characteristic homomorphism is not surjective.
+  \emph{This thus implies that $D$ is not integral even at the generic point of the irreducible component in question.}
+  This shows in a particularly striking manner how varieties with nilpotent elements are necessary for understanding the most classical phenomena of the theory of surfaces.
+
+  \emph{[Comp.]}
+  Concerning the example of Zappa, we note that Mumford has even constructed an irreducible component of the Hilbert scheme for $\mathbb{P}_\mathbb{C}^3$ (whose general points represent non-singular curves of degree $14$ and genus $24$), which is non-reduced at its generic points.
+  Blowing up the curves obtained, he also obtains a regular projective scheme of dimension $3$ over $\mathbb{C}$, whose formal scheme of modules is non-reduced at its generic point, or, equivalently, such that its local variety of modules, in the sense of analytic geometry, over $\mathbb{C}$ (see \emph{Séminaire Cartan} \textbf{13}, 1960/61) is non-reduced at all its points.
+\end{remark}
+
+\begin{remark}\label{fga3.iv-5-remark-5.6}
+  We have given, in \Cref{fga3.iv-5-remark-5.5}, a criterion for simplicity, which applies in particular to schemes of divisors.
+  Kodaira gave a different criterion in \cite{Kod1956}, given by the vanishing of $\operatorname{H}^1(X_0,\mathcal{L})$, where $\mathcal{L}=\mathcal{J}_0^{-1}$ is the invertible sheaf on $X_0$ defined by the divisor $Y_0$;
+  this criterion holds whenever $S$ is the spectrum of a field of characteristic $0$, and is proved in \cite{Kod1956} by transcendental methods in the case where the base field is $\mathbb{C}$.
+  We note here that, in general, $S$ now arbitrary, Kodaira's condition is a sufficient condition for the canonical morphism $D\to\underline{\operatorname{Pic}}_{X/S}$ from the prescheme of divisors to the Picard prescheme of $X/S$ to be simple at the point $x$ in question (as we easily verify by the usual criterion for simplicity, once we have the existence of $\underline{\operatorname{Pic}}_{X/S}$).
+  Then if, further, $\underline{\operatorname{Pic}}_{X/S}$ is simple over $S$ at the point given by the image of $x$ (for example if $\underline{\operatorname{Pic}}_{X/S}$ is simple over $S$), then $D$ is simple over $S$ at $x$.
+  On the other hand, Cartier has shown that every group prescheme locally of finite type over \emph{a field $k$ of characteristic $0$} is simple over $k$.
+  By combining these two results, we recover the result of Kodaira.
+  Note that it follows from these remarks that, over a field $K$ of characteristic $p>0$, if $\underline{\operatorname{Pic}}_{X/S}$ is not simple over $k$ (which is the case whenever $X$ is the Igusa surface), then the condition $\operatorname{H}^1(X_0,\mathcal{L})=0$ implies to the contrary that $D$ is not simple at $x$, and even not reduced at $x$ if $K$ is algebraically closed.
+\end{remark}
+
+
+To finish, we give the following result, which plays an important role in the differential study of fibred spaces:
+
+
+\begin{proposition}\label{fga3.iv-5-proposition-5.7}
+  Let $X$ be a finite prescheme that is flat over $S$ and locally Noetherian, and let $Z$ be a prescheme over $S$ such that $\mathrm{pr}od_{X/S}(Z/X)$ exists (which is the case if $Z$ is quasi-projective over $X$).
+  If $Z$ is simple over $X$, then $\mathrm{pr}od_{X/S}(Z/X)$ is simple over $S$.
+\end{proposition}
+
+\begin{cproof}
+  This is an immediate consequence of the definition, and of the usual criterion of simplicity \cite{Gro1960b}, III, §3.1.
+\end{cproof}
+
+
+Note that if $X$ is finite and flat over $S$, then the question of the existence of $\mathrm{pr}od_{X/S}(Z/X)$ can be dealt with in a very elementary manner, without using the theory of Hilbert schemes.
+We find, for example, that if $X$ is radicial over $S$, then $\mathrm{pr}od_{X/S}(Z/X)$ exists without any restrictions on $Z$.
+For example, let $T$ be an $S$-prescheme, and let $T_n$ be "the infinitesimal neighbourhood of order $n$" of the diagonal of $T\times_S T$ in $T\times_S T$, endowed with the morphisms $p_1,p_2\colon T_n\to T$ induced by the two projections.
+We can consider $T_n$ as a finite prescheme over $T$ thanks to $p_1$, and we suppose further that $T_n$ is flat over $T$ (which is the case if $T$ is simple over $S$).
+For every prescheme $X$ over $T$, set
+\[(X/T/S)^{(n)} = \mathrm{pr}od_{T_n/S}(p_2^*(X/T)/T_n)\]
+which is a prescheme over $T$ called the \emph{bundle of germs of sections of order $n$ of $X$ over $T$} (with respect to $S$).
+This depends functorially on $X$, and is simple over $T$ if $X$ is.

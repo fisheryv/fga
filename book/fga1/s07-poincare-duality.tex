@@ -1,0 +1,105 @@
+% !TeX root = ../../fga.tex
+\section{Poincar\'{e} duality}\label{fga1-7}
+
+
+Let $X$ be a non-singular projective variety of dimension $n$.
+Then $\operatorname{H}^\bullet(X)=\operatorname{H}^\bullet(X,\Omega_X^\bullet)$ is a finite-dimensional bigraded anticommutative algebra, that we grade by the total degree, so that $\operatorname{H}^{p,q}(X)=\operatorname{H}^p(X,\Omega_X^q)$ is of degree $p+q$;
+the degrees of $\operatorname{H}^\bullet(X)$ are concentrated between $0$ and $2n$.
+By \Cref{fga1-theorem-2} and the corollary to Theorem 3 \Cref{fga1-theorem-3-corollary}, $\operatorname{H}^\bullet(X)$ is a "Poincaré algebra" of dimension $2n$, i.e. $\operatorname{H}^{2n}(X)$ is endowed with an isomorphism to the base field $k$, and the product $\operatorname{H}^m(X)\times\operatorname{H}^{2n-m}(X)\to\operatorname{H}^{2n}(X)=k$ is a duality between $\operatorname{H}^m(X)$ and $\operatorname{H}^{2n-m}(X)$.
+Furthermore, if $Y$ is another non-singular projective variety, then the Künneth formula for coherent algebraic sheaves gives
+
+\begin{equation}\tag{7.1}\label{fga1-equation-7.1}
+  \operatorname{H}^\bullet(X\times Y) = \operatorname{H}^\bullet(X)\otimes\operatorname{H}^\bullet(Y)
+\end{equation}
+
+which is an isomorphism that is compatible with the Poincaré algebra structures.
+Furthermore, $\operatorname{H}^\bullet(X)$ is, as a commutative algebra, a covariant functor in $X$, since a morphism $f\colon Y\to X$ defines, in an evident way, a homomorphism of graded algebras
+
+\begin{equation}\tag{7.2}\label{fga1-equation-7.2}
+  f^*\colon \operatorname{H}^\bullet(X)\to\operatorname{H}^\bullet(Y)
+\end{equation}
+
+Since we are working with Poincaré algebras, we obtain, by transposition, a homomorphism of vector spaces
+
+\begin{equation}\tag{7.3}\label{fga1-equation-7.3}
+  f_*\colon \operatorname{H}^\bullet(Y)\to\operatorname{H}^\bullet(X)
+\end{equation}
+
+We have seen in \Cref{fga1-4} that the effect of $f^*$ on cohomology classes that correspond to non-singular cycles can be interpreted geometrically by taking the cohomology classes that correspond to their inverse images.
+It is important, in our current study, to show that \Cref{fga1-equation-7.3} corresponds similarly to the "direct image" operation on cycles.
+This follows (under suitable non-singularity conditions, at least) from the following particular case:
+
+\begin{theorem}\label{fga1-theorem-4}
+  If $f$ is the identity map from a non-singular subvariety $Y^m$ of $X^n$ to $X^n$, then, denoting by $1_Y$ the unit element of $\operatorname{H}(Y)$, we have
+  \begin{equation}\tag{7.4}\label{fga1-equation-7.4}
+    f_*(1_Y) = P_X(Y)
+  \end{equation}
+  where the right-hand side is the cohomology class in $X$ associated to $Y$.
+\end{theorem}
+
+\begin{cproof}
+  We consider, by \Cref{fga1-theorem-3}, the transpose of the homomorphism
+  \[
+    \operatorname{H}^m(X,\Omega_X^m)
+    \to \operatorname{H}^m(Y,\Omega_Y^m)
+    = \operatorname{H}^m(X,\Omega_Y^m)
+  \]
+  as the homomorphism
+
+  \begin{equation}\tag{7.5}\label{fga1-equation-7.5}
+    \begin{CD}
+      @.
+      \operatorname{Ext}_{\mathcal{O}_X}^{n-m}(X;\Omega_Y^m,\Omega_X^n)
+      @>\sim>>
+      \operatorname{Hom}_{\mathcal{O}_X}(X;\Omega_Y^m,\Omega_Y^m)
+      \\@. @VVV @.
+      \\\operatorname{H}^{n-m}(X,\Omega_X^{n-m})
+      @>\sim>>
+      \operatorname{Ext}_{\mathcal{O}_X}^{n-m}(X;\Omega_X^m,\Omega_X^n)
+    \end{CD}
+  \end{equation}
+
+
+  We can verify that the element $1_Y$ of the dual of $\operatorname{H}^m(Y,\Omega_Y^m)$ is identified with the element of the right-hand side corresponding to the identity endomorphism of $\Omega_Y^m$, and also that the image of this element in $\operatorname{H}^{n-m}(X,\Omega_X^{n-m})$ is indeed $P_X(Y)$.
+\end{cproof}
+
+\Cref{fga1-equation-7.4} in \Cref{fga1-theorem-4} is equivalent to
+
+\begin{equation}\tag{7.4 bis}\label{fga1-equation-7.4bis}
+  \langle \xi^{m,m}, P_X(Y) \rangle \varepsilon_Y
+  = f_*(\xi^{m,m})
+  \quad\text{where }\xi^{m,m}\in\operatorname{H}^m(X,\Omega_X^m)
+\end{equation}
+
+where $\varepsilon_Y$ is the fundamental element of $\operatorname{H}^m(Y,\Omega_Y^m)$, and this, in the case of non-singular projective varieties, gives a new definition of the cohomology class associated to $Y$.
+
+These relations (which could have been given in \Cref{fga1-4}) can be stated, and are indeed true, for arbitrary non-singular varieties, with the second, for example, following from the commutativity of the following diagram of canonical endomorphisms:
+
+\begin{equation}\tag{7.6}\label{fga1-equation-7.6}
+  \footnotesize
+  \begin{CD}
+    \operatorname{Ext}_{\mathcal{O}_X}^{n-m}(X;\Omega_X^m,\Omega_X^n)
+    @<<<
+    \operatorname{Ext}_{\mathcal{O}_X}^{n-m}(X;\Omega_Y^m,\Omega_X^n)
+    @>\sim>>
+    \operatorname{Hom}_{\mathcal{O}_X}(X;\Omega_Y^m,\Omega_Y^m)
+    \\@VVV @. @VVV
+    \\\operatorname{Ext}_{\mathcal{O}_X}^{n-m}(X;\mathcal{O}_X,\Omega_X^{n-m})
+    @<<<
+    \operatorname{Ext}_{\mathcal{O}_X}^{n-m}(X;\mathcal{O}_Y,\Omega_X^{n-m})
+    @>\sim>>
+    \operatorname{Hom}_{\mathcal{O}_X}(X;\Omega_X^m,\Omega_Y^m)
+  \end{CD}
+\end{equation}
+
+We thus obtain an exact equivalent of the formalism of Poincaré duality for compact oriented varieties.
+In particular, \Cref{fga1-theorem-4} allows us to determine the cohomology class associated to the diagonal of $X\times X$.
+By a well-known argument, we thus deduce, for example, a \emph{Lefschetz formula}:
+
+\begin{theorem}\label{fga1-theorem-5}
+  Let $f$ be an endomorphism of a non-singular projective variety $X$ such that the fixed points of $f$ are of multiplicity $1$.
+  Then the number of these fixed points is congruent, modulo the characteristic of $k$, to the alternating sum of the traces of the endomorphisms of the $\operatorname{H}^i(X)$ defined by $f$.
+\end{theorem}
+
+The restriction on $f$ that we have to make is related to the difficulties mentioned in the remark in \Cref{fga1-4}.
+We note, however, that the Lefschetz formula still holds true if $f$ is "homotopic" to an endomorphism whose fixed points are all of multiplicity $1$.

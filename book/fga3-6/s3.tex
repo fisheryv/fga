@@ -1,0 +1,166 @@
+% !TeX root = ../../fga.tex
+\section{The canonical abelian subscheme of $\underline{\operatorname{Pic}}_{X/S}$, and the Albanese scheme}\label{fga3.vi-3}
+
+
+\begin{proposition}\label{fga3.vi-3-proposition-3.1}
+    Let $k$ be a field, and let $G$ a group scheme of finite type over $k$ that is commutative and "without additive component".
+    Then $G_\mathrm{red}^0$ is separable over $k$, and thus a simple group scheme over $k$.
+\end{proposition}
+
+\begin{cproof}
+    Since the claim is trivial if $k$ is perfect, and in particular for $G_{\overline{k}}$, where $\overline{k}$ is the algebraic closure of $k$, it suffices to show that $(G_{\overline{k}}^0)_\mathrm{red}$ comes from a subscheme of $G$.
+    But from the hypothesis that $G_{\overline{k}}$ contains no additive component it easily follows that there exists an integer $m$ such that $(G_{\overline{k}}^0)_\mathrm{red}$ is the "scheme-theoretic" image of the $m$-th power homomorphism in $G_{\overline{k}}$.
+    Since the latter homomorphism comes from the analogous homomorphism for $G$, the scheme-theoretic image of this provides the desired object.
+\end{cproof}
+
+\begin{corollary}\label{fga3.vi-3-corollary-3.2}
+    Let $X$ be a normal and proper scheme over $k$ such that $\underline{\operatorname{Pic}}_{X/k}$ exists.
+    Then there exists an abelian subscheme of $\underline{\operatorname{Pic}}_{X/k}$ whose underlying set is $\underline{\operatorname{Pic}}_{X/k}^0$.
+\end{corollary}
+
+\begin{cproof}
+    By (ii) of \Cref{fga3.vi-2-theorem-2.1}, since $\underline{\operatorname{Pic}}_{X/k}^0$ is proper over $k$, it satisfies the conditions of \Cref{fga3.vi-3-proposition-3.1}.
+\end{cproof}
+
+
+The above result shows that, in certain cases, the classical "Picard variety" (which is $(\underline{\operatorname{Pic}}_{X/\overline{k}})_\mathrm{red}^0$ in the current theory) "is defined over $k$", without supposing the field $k$ to be perfect.
+
+Now let $f\colon X\to S$ be a proper and flat relative scheme, with $\mathcal{O}_S\xrightarrow{\sim} f_*(\mathcal{O}_X)$ for simplicity, such that $\underline{\operatorname{Pic}}_{X/S}$ exists and that $\underline{\operatorname{Pic}}_{X/S}^0$ is proper over $S$.
+Suppose further, for (ii) of \Cref{fga3.vi-3-theorem-3.3}, that there exists an open of $\underline{\operatorname{Pic}}_{X/S}$ containing $\underline{\operatorname{Pic}}_{X/S}^0$ that is quasi-projective over $S$;
+this condition is satisfied, as we have seen, if $f$ is projective and with separable or irreducible geometric fibres.
+Recall that an \emph{abelian scheme} over $S$ is a group scheme over $S$ that is proper and simple over $S$ with connected geometric fibres.
+We propose to examine whether or not there exists a group subscheme $A$ of $\underline{\operatorname{Pic}}_{X/S}$ that is an abelian scheme and whose underlying set is $\underline{\operatorname{Pic}}_{X/S}^0$.
+We have just seen that such an $A$ always exists if $S$ is the spectrum of a field.
+Here is what we know how to say in the general case envisaged here:
+
+
+\begin{theorem}\label{fga3.vi-3-theorem-3.3}
+    Under the above conditions:
+
+    \begin{enumerate}[i.]
+        \item If there exists an abelian subscheme of $\underline{\operatorname{Pic}}_{X/S}$ whose underlying set is $\underline{\operatorname{Pic}}_{X/S}^0$, then it is unique.
+              Its formation is thus compatible with base change.
+        \item For there to exist such an abelian subscheme, it is necessary and sufficient that it exist after every base change $S'\to S$, where $S'$ is local Artinian;
+              if $S$ is the spectrum of a local ring, it even suffices to test with the $S'=\operatorname{Spec}(A_n)$ where $A_n=A/\mathfrak{m}^{n+1}$.
+              If $S$ is reduced, then it equally suffices to test with the $S'$ that are the spectrum of a discrete valuation ring (complete, with algebraically closed residue field, if one desires).
+        \item Suppose that $A$ exists, and let $B=\operatorname{Alb}^0(X/S)$ be the dual abelian scheme (i.e. $B=\operatorname{Pic}_{A/S}^0$ [Mumford–Tate seminar, 1962]).
+              Then we can canonically construct a principal homogeneous space $P=\operatorname{Alb}^1(X/S)$ for $B$, and an $S$-morphism $X\to P$ that is universal for the $S$-morphisms from $X$ to para-abelian schemes (i.e. to principal homogeneous spaces for abelian schemes).
+              The formation of $\operatorname{Alb}^0(X/S)$, $\operatorname{Alb}^1(X/S)$, and $X\to\operatorname{Alb}^1(X/S)$ commutes with base change.
+    \end{enumerate}
+\end{theorem}
+
+\begin{cproof}
+    We sketch the proof:
+    \begin{enumerate}
+        \item This is a general property of rigidity for abelian subschemes of commutative group schemes: if two such subschemes agree set-theoretically at a point $s\in S$, then they agree over the entire connected component of $s$ ([Mumford–Tate seminar, 1962]).
+              (This result generalises a classical theorem of Chow).
+        \item Using Hilbert schemes, we see that the functor that, to every $S'$ over $S$ associates the set (consisting of either one or zero elements) of canonical abelian subschemes of $(\underline{\operatorname{Pic}}_{X/S})\times_S S'$ is representable by a scheme $T$ of finite type over $S$.
+              By (i), $T\to S$ is a monomorphism, and by \Cref{fga3.vi-3-corollary-3.2}, it is surjective.
+              To say that there exists a canonical abelian subscheme of $\underline{\operatorname{Pic}}_{X/S}$ implies that $T$ is a section over $S$, or that $T\to S$ is an isomorphism.
+              This is equivalent to saying that $T\to S$ is étale, or, in the case where $S$ is reduced, that $T\to S$ is proper.
+              Whence immediately (ii).
+        \item Simply using the definition of $\underline{\operatorname{Pic}}_{X/S}$, we note that, for every abelian scheme $C$ over $S$, the data of an $S$-morphism from $X$ to a principal homogeneous space for $C$ is equivalent to the data of a group homomorphism $C'\to\underline{\operatorname{Pic}}_{X/S}$, where $C'$ is the dual abelian scheme of $C$.
+              But if the canonical abelian subscheme $A$ of $\underline{\operatorname{Pic}}_{X/S}$ exists, then these homomorphisms necessarily factor through $A$ (and we can see by again using the points of finite order).
+              Whence immediately (iii).
+    \end{enumerate}
+\end{cproof}
+
+\begin{remark}\label{fga3.vi-3-remarks-3.4}
+    We denote by $\underline{\operatorname{Pic}}_{X/S}^{00}$ the canonical abelian subscheme of $\underline{\operatorname{Pic}}_{X/S}$, if it exists.
+    This is, unfortunately, not always the case, as we can see by infinitesimally varying the Igusa surface (by first-order modular deformation).
+    It is however possible that $\underline{\operatorname{Pic}}_{X/S}^{00}$ exists at least if $S$ is reduced, or, equivalently, by (ii), if $S$ is the spectrum of a discrete valuation ring.
+    So let $X_0$ and $X_1$ be the special and generic fibres of $X$ (respectively), and let $A_1=\underline{\operatorname{Pic}}_{X_1/K_1}$, where $K$ is the field of fractions of the valuation ring $V$.
+    By Koizumi, there exists an abelian scheme $A$ over $S$, essentially unique, whose general fibre is $A_1$, and we easily see as in [(2.1), (i)] \Cref{fga3.vi-2-theorem-2.1} (supposing from now on that $X$ is simple over $S$) that the identity morphism of $A_1$ extends to a morphism
+    \[
+        A \to \underline{\operatorname{Pic}}_{X/S}.
+    \]
+    From this, we obtain a homomorphism
+
+    \begin{equation}\tag{*}\label{fga3.vi-3-equation-star}
+        A_0 \to \underline{\operatorname{Pic}}_{X_0/k}^{00}
+    \end{equation}
+
+    which we can easily show to be a surjective homomorphism with kernel equal to a finite $p$-group, where $p$ is the characteristic of the residue field $k$ (still by using the points of finite order).
+    With this, the following conditions on $X/S$ are equivalent:
+
+    \begin{enumerate}[label=\alph*.]
+        \item The above homomorphism \Cref{fga3.vi-3-equation-star} is an isomorphism (which Shimura expresses by saying that the formation of the "Picard variety" is "compatible with specialisations").
+        \item $\underline{\operatorname{Pic}}_{X/S}^{00}$ exists (and is then exactly $A$).
+        \item (As a reminder) The $\underline{\operatorname{Pic}}_{X_n/S}^{00}$ exist.
+    \end{enumerate}
+
+
+    By the remark that we made concerning the kernel of \Cref{fga3.vi-3-equation-star}, condition (a) is satisfied if the residual characteristic is zero, but this result will be notably generalised in \Cref{fga3.vi-3-theorem-3.5}.
+
+    Of course, if $\underline{\operatorname{Pic}}_{X/S}$ is simple over $S$ at the points of $\underline{\operatorname{Pic}}_{X/S}^0$, then the latter is open in $\underline{\operatorname{Pic}}_{X/S}$ (cf. \Cref{fga3.vi-1-corollary-1.7}) and is thus, endowed with the induced structure, an abelian subscheme of $\underline{\operatorname{Pic}}_{X/S}$, and thus equal to $\underline{\operatorname{Pic}}_{X/S}^{00}$, which exists in this case.
+    But we have much better:
+\end{remark}
+
+\begin{theorem}\label{fga3.vi-3-theorem-3.5}
+    Under the conditions of \Cref{fga3.vi-3-theorem-3.3}, let $s\in S$ be such that $\underline{\operatorname{Pic}}_{X_s/k(s)}$ is simple over $k(s)$ (or, equivalently, such that $\dim\underline{\operatorname{Pic}}_{X_s/k(s)}=\dim\operatorname{H}^1(X_s,\mathcal{O}_{X_s})$).
+    Then there exists an open neighbourhood $U$ of $s$ such that $\underline{\operatorname{Pic}}_{X/S}$ is simple over $S$ at the points of $\underline{\operatorname{Pic}}_{X/S}^0|U$, which is thus an open abelian subscheme in $\underline{\operatorname{Pic}}_{X/S}|U$.
+    A fortiori, $\underline{\operatorname{Pic}}_{X|U/U}^{00}$ exists.
+\end{theorem}
+
+\begin{cproof}
+    We describe the principle of the proof.
+    The above allows us to reduce to the case where $S$ is the spectrum of an Artinian local ring $A$, and we argue by induction on the infinitesimal order of $A$.
+    We can thus suppose that $\underline{\operatorname{Pic}}_{X_n/A_n}^0$ is simple over $A_n$, and reduce to proving that $\underline{\operatorname{Pic}}_{X_{n+1}/A_{n+1}}^0$ is simple over $A_{n+1}$.
+    Note that, for this, it suffices to construct an abelian scheme $P_{n+1}$ over $A_{n+1}$ that extends $P_n=\underline{\operatorname{Pic}}_{X_n/A_n}^0$, along with an invertible module $\mathcal{L}_{n+1}$ on $X_{n+1}\times_{A_{n+1}}P_{n+1}$ that extends the invertible module $\mathcal{L}_n$ on $X_n\times_{A_n}P_n$ that arises in the definition of the Picard scheme $\underline{\operatorname{Pic}}_{X_n/A_n}$ as the solution to a universal problem.
+    (N.B. We can suppose that $X$ is endowed with a section over $S$...).
+    For this construction, we must use the following key result: \emph{every abelian scheme defined over a quotient of an Artinian local ring can be extended} (in other words, the absolute "formal scheme of modules" (\Cref{fga3.ii}) for an abelian scheme over an algebraically closed field is simple over the ring of Witt vectors over $k$);
+    this result can be obtained by using the general formal properties of the obstruction to lifting, and the group operations.
+    With this result, we start by extending $P_n$ arbitrarily to $P_{n+1}$;
+    we then find an obstruction to lifting $\mathcal{L}_n$, found in $\operatorname{H}^2(X_0\times P_0,\mathcal{O}_{X_0\times P_0})\otimes_k V$ (where $V=\mathfrak{m}^{n+1}/\mathfrak{m}^{n+2}$), and more precisely in the subspace $\operatorname{H}^1(X_0,\mathcal{O}_{X_0})\otimes\operatorname{H}^1(P_0,\mathcal{O}_{P_0})\otimes_k V$ (taking into account the fact that the restriction of $\mathcal{L}_n$ to the two factors $X_n$ and $P_n$ is trivial).
+    But this latter space is exactly $\operatorname{H}^1(P_0,\mathcal{G}_{P_0/k})\otimes V$, where $\mathcal{G}_{P_0/k}$ is the tangent sheaf to $P_0/k$, and thus also the space that expresses the indeterminacy that there was in the lifting of $P_n$ to $P_{n+1}$ (\Cref{fga3.ii}).
+    So we can correct this lifting (in exactly one way, as should be the case) in such a way as to kill the obstruction to lifting $\mathcal{L}_n$.
+\end{cproof}
+
+\begin{corollary}\label{fga3.vi-3-corollary-3.6}
+    Under the conditions of \Cref{fga3.vi-3-theorem-3.5}, $\operatorname{R}^1 f_*(\mathcal{O}_X)$ is a locally free module on $S$ in a neighbourhood of $s$, and its formation commutes with base change.
+\end{corollary}
+
+\begin{cproof}
+    This module is exactly the tangent module to $\underline{\operatorname{Pic}}_{X/S}$ along the identity section.
+\end{cproof}
+
+\begin{remark}\label{fga3.vi-3-remark-3.7}
+    Using the same argument as for \Cref{fga3.vi-3-theorem-3.5}, we can show that, if $S'$ is a subscheme of $S$ defined by a nilpotent coherent ideal, and if we suppose only that $\underline{\operatorname{Pic}}_{X'/S'}^0$ exists and has simple fibres, then $\underline{\operatorname{Pic}}_{X/S}^0$ necessarily exists and is an abelian scheme over $S$.
+    This allows us to construct Picard schemes in certain cases, despite the absence of any projective hypothesis;
+    for example, the dual abelian scheme of an abelian scheme over an Artinian ring always exists.
+    Using \Cref{fga3.vi-3-corollary-3.6} in the case where $X$ is an abelian scheme over $S$, and using the known structure of $\operatorname{H}^\bullet(X_s,\mathcal{O}_{X_s})$ as an exterior algebra over $\operatorname{H}^1(X_s,\mathcal{O}_{X_s})$ (Rosenlicht–Serre), we find that $\operatorname{R}^if_*(\mathcal{O}_X)$ is locally free for \emph{all} $i$, and more precisely that it is isomorphic to the $i$-th exterior power of $\operatorname{R}^1f_*(\mathcal{O}_X)$.
+\end{remark}
+
+\begin{remark}\label{fga3.vi-3-remark-3.8}
+    In the case of a simple projective morphism $f\colon X\to S$, with $S$ reduced and of residual characteristics zero, the result of \Cref{fga3.vi-3-corollary-3.6} was already known, by transcendental methods, as a consequence of Hodge theory.
+    In fact, all the $\operatorname{R}^pf_*(\Omega_{X/S}^q)$ are then locally free.
+    We have, however, counterexamples in the case of unequal characteristics for "locally free $\operatorname{R}^1f_*(\mathcal{O}_X)$", by Serre varieties (\cite{Ser1958b}, p.50).
+    It seems that we do not have any counterexample in equal characteristic.
+\end{remark}
+
+\begin{corollary}\label{fga3.vi-3-corollary-3.8}
+    Under the conditions of \Cref{fga3.vi-3-theorem-3.5}, $\underline{\operatorname{Pic}}_{X/S}|U$ is simple over $U$ at all points of $\underline{\operatorname{Pic}}_{X/S}^\sigma|U$.
+\end{corollary}
+
+\begin{cproof}
+    We apply (i) of \Cref{fga3.vi-2-proposition-2.10}.
+\end{cproof}
+
+
+In particular, taking (iii) of \Cref{fga3.vi-2-proposition-2.10} into account:
+
+
+\begin{corollary}\label{fga3.vi-3-corollary-3.9}
+    Suppose that $S$ is of residual characteristics zero.
+    Then $\underline{\operatorname{Pic}}_{X/S}^\tau$ is simple over $S$.
+\end{corollary}
+
+\begin{remark}\label{fga3.vi-3-remark-3.10}
+    We thus deduce, for example, that if $\underline{\operatorname{Pic}}_{X/S}$ is also \emph{proper} over $S$, then the Néron–Severi torsion group of geometric fibres of $f$ is constant on every connected component of $S$ (which is also evident by transcendental methods when $f$ is simple and projective).
+    We note that the direct use of \Cref{fga3.vi-2-theorem-2.5} allows us to show, more generally, that, if $\underline{\operatorname{Pic}}_{X/S}$ is proper over $S$ (for example, if $f\colon X\to S$ is simple and projective), and if $q$ is a prime number distinct from the residual characteristics of $S$, then the $q$-primary component of the Néron–Severi torsion groups of geometric fibres of $X/S$ is constant on every connected component of $S$.
+    It is no longer, however, the case in characteristic $p>0$ for the $p$-primary component of the torsion group.
+    However, it remains possible that the rank over the $k(s)$ of $\underline{\operatorname{Pic}}_{X_s/k(s)}/\underline{\operatorname{Pic}}_{X_s/k(s)}^{00}=T_{X_s/k(s)}$ is locally constant;
+    when $S$ is reduced, we  can show that this is equivalent to showing that $\underline{\operatorname{Pic}}_{X/S}^{00}$ exists and that $\underline{\operatorname{Pic}}_{X/S}$ is \emph{flat} over $S$, and it suffices to test in the cases where $S$ is the spectrum of a discrete valuation ring.
+    This is what I have verified in the few examples that I have looked at;
+    but since the corresponding statement with $S$ Artinian is false (cf. \Cref{fga3.vi-2-remark-2.9} and \Cref{fga3.vi-3-remarks-3.4}), we must not get carried away.
+\end{remark}

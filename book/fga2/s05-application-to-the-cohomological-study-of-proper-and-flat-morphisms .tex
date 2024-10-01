@@ -1,0 +1,79 @@
+% !TeX root = ../../fga.tex
+\section{Application to the cohomological study of proper and flat morphisms }\label{fga2-5}
+
+Let $f\colon X\to Y$ be a proper morphism, and $\mathcal{F}$ a coherent sheaf on $X$, with $\mathcal{F}$ assumed to be $Y$-flat, i.e. the $\mathcal{F}_x$ are flat modules over the rings $\mathcal{O}_y$ (where $y=f(x)$).
+This also implies that, for every $y\in Y$, if we filter $\mathcal{F}$ along the fibre $f^{-1}(y)$ by the $\mathfrak{m}_y^n\mathcal{F}$ (where $\mathfrak{m}_y$ is the maximal ideal of $\mathcal{O}_y$), then the associated graded algebra is isomorphic to $(\mathcal{F}/\mathfrak{m}_y\mathcal{F})\otimes_{k(y)}\operatorname{gr}(\mathcal{O}_y)$;
+in other words, we have that
+\[\mathfrak{m}_y^n\mathcal{F}/\mathfrak{m}_y^{n+1} = \mathcal{F}_y\otimes_{k(y)}(\mathfrak{m}_y^n/\mathfrak{m}_y^{n+1})\]
+for every integer $n$, where $\mathcal{F}_y$ denotes the sheaf $\mathcal{F}/\mathfrak{m}_y\mathcal{F}$ induced by $\mathcal{F}$ on $X_y$ (with $X_y$ denoting the fibre $f^{-1}(y)$ considered as a proper scheme over the residue field $k(y)$ of $y$).
+Taking this isomorphism, as well as \Cref{fga2-theorem-2}, into account, we obtain augmentations, and sometimes computations, of the $\operatorname{R}^q f_*(\mathcal{F})$ in a neighbourhood of $y$, knowing the cohomology of $X_y$ with coefficients in $\mathcal{F}_y$.
+Here \Cref{fga2-theorem-2} takes the form
+\[\overline{\operatorname{R}^q f_*(\mathcal{F})} = \varprojlim_n \operatorname{H}^q(\mathcal{F}_y,\mathcal{F}/\mathfrak{m}_y^n\mathcal{F})\]
+We will mention here only the following consequence:
+
+\begin{proposition}\label{fga2-proposition-1}
+    Let $f\colon X\to Y$ be a proper morphism, and $\mathcal{F}$ a coherent $Y$-flat sheaf on $X$.
+    Let $y\in Y$, let $q$ be an integer, and suppose that $\operatorname{H}^q(X_y,\mathcal{F}_y)=0$.
+    Then $\operatorname{R}^q f_*(\mathcal{F})$ is zero on a a neighbourhood of $y$, and, for every $n$, the natural homomorphism
+    \[\operatorname{R}^{q-1}f_*(\mathcal{F})_y \to \operatorname{H}^{q-1}(X_y,\mathcal{F}_y/\mathfrak{m}_y^n\mathcal{F}_y)\]
+    is surjective.
+\end{proposition}
+
+In particular, if $f$ is a flat morphism (i.e. if $\mathcal{O}_X$ is $Y$-flat), then every locally free coherent sheaf $\mathcal{F}$ on $X$ is $Y$-flat.
+Let $\mathcal{F}$ and $\mathcal{G}$ be two such sheaves, and apply \Cref{fga2-proposition-1} to $\mathcal{H}om_{\mathcal{O}_X}(\mathcal{F},\mathcal{G})$ and $q=1$ to obtain:
+
+\begin{theorem}\label{fga2-theorem-7}
+    Let $f$ be a flat proper morphism, $\mathcal{F}$ and $\mathcal{G}$ locally free coherent sheaves on $X$, and $y\in Y$;
+    suppose that $\operatorname{H}^1(X_y,\mathcal{H}om_{\mathcal{O}_X}(\mathcal{F}_y,\mathcal{G}))=0$.
+    Then every homomorphism $u_0\colon\mathcal{F}_y\to\mathcal{G}_y$ is induced by a homomorphism $u\colon\mathcal{F}|V\to\mathcal{G}|V$, where $V=f^{-1}(U)$ is the inverse image of a neighbourhood $U$ of $y$.
+\end{theorem}
+
+\begin{corollary}\label{fga2-theorem-7-corollary-1}
+    If $u_0$ is an isomorphism (resp. a monomorphism, resp. an epimorphism), then so too is $u$, for small enough $U$.
+\end{corollary}
+
+In particular:
+
+\begin{corollary}\label{fga2-theorem-7-corollary-2}
+    Let $E_0$ be a locally free coherent sheaf on $X_y$ such that $\operatorname{H}^1(X_y;\mathcal{H}om_{\mathcal{O}_X}(E_0,E_0))=0$.
+    Then any two locally free sheaves whose restrictions to $X_y$ are isomorphic to $E_0$ are themselves isomorphic to one another in a neighbourhood of $X_y$.
+\end{corollary}
+
+Thus:
+
+\begin{corollary}\label{fga2-theorem-7-corollary-3}
+    Suppose that $\operatorname{H}^1(X_y,\mathcal{O}_{X_y})=0$.
+    Then any two invertible sheaves on $X$ (i.e. locally isomorphic to $\mathcal{O}_X$) whose restrictions to $X_y$ are isomorphic are themselves isomorphic to one another.
+\end{corollary}
+
+It thus follows that:
+
+\begin{proposition}\label{fga2-proposition-2}
+    Let $Y$ be a connected scheme, and $E$ a locally free coherent sheaf on $Y$.
+    Consider the bundle of projective spaces $X=\mathbb{P}(E)$ associated to $E$, endowed with its well-known invertible sheaf $\mathcal{O}_X(1)$.
+    Then every invertible sheaf $\mathcal{L}$ on $X$ is isomorphic to a sheaf of the form $f^*(\mathcal{L}')\otimes\mathcal{O}_X(n)$, where $\mathcal{L}'$ is an invertible sheaf on $Y$, and $n$ is an integer.
+    Furthermore, $n$ is uniquely determined, and $\mathcal{L}'$ is determined up to isomorphism.
+\end{proposition}
+
+\begin{cproof}
+    \Cref{fga2-theorem-7-corollary-3} above proves that $\mathcal{L}$ is isomorphic to an $\mathcal{O}_X(n)$-module on a neighbourhood of each fibre.
+    The rest is more or less formal.
+\end{cproof}
+
+
+\Cref{fga2-proposition-2} allows us to determine the $Y$-morphisms from $X=\mathbb{P}(E)$ to another projective bundle.
+We see, in particular:
+
+\begin{corollary}\label{fga2-proposition-2-corollary-1}
+    Let $u$ be an automorphism of $X=\mathbb{P}(E)$.
+    Then there exists an invertible sheaf $\mathcal{L}'$ on $Y$, and an isomorphism $v$ from $E$ to $E\otimes\mathcal{L}'$ such that $u$ is the isomorphism corresponding to $\mathbb{P}(E)\xrightarrow{\sim}\mathbb{P}(E\otimes\mathcal{L}')=\mathbb{P}(E)$;
+    the pair $(v,\mathcal{L}')$ is determined up to isomorphism.
+\end{corollary}
+
+Let $\operatorname{G_a}mma$ be the set of classes of invertible bundles $\mathcal{L}'$ on $Y$ such that $E\otimes\mathcal{L}'$ is isomorphic to $E$.
+Its elements are torsion, since, if $n$ is the rank of $E$, then (by taking $n$-th exterior powers) we must have that $(\mathcal{L}')^{\otimes n}\xrightarrow{\sim}\mathcal{O}_Y$.
+The above corollary can then be expressed by saying that we have an exact sequence of groups:
+\[e \to \operatorname{Aut}(E)/\operatorname{G_a}mma(Y,\mathcal{O}_Y^*) \to \operatorname{Aut}_Y(X) \to \operatorname{G_a}mma \to e\]
+(which can also be deduced from the exact sequence in cohomology induced by the exact sequence of \emph{sheaves} of groups
+\[e \to \mathcal{O}_X^\times \to \mathcal{A}ut \to \mathcal{A}ut_Y(X) \to e\]
+where $\mathcal{O}_X^\times$ is the sheaf of "units" of $\mathcal{O}_X$, identified with the centre of $\mathcal{A}ut(E)$.)

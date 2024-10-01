@@ -1,0 +1,86 @@
+% !TeX root = ../../fga.tex
+\section{Bounded sets of sheaves: invariance properties}\label{fga3.iv-1}
+
+Let $k$ be a field, and $X$ a $k$-prescheme (which we take to be of finite type, for simplicity).
+For every extension $K/k$, we obtain a $K$-prescheme $X_K=X\otimes_k K$.
+If $\mathcal{F}$ is a coherent sheaf on $X_K$, and if $K'$ is an extension of $K$, then $\mathcal{F}\otimes_K K'=\mathcal{F}_{K'}$ is a quasi-coherent sheaf on $X_K\otimes_KK'=X_{K'}$.
+So, if $K$ and $K'$ are arbitrary extensions of $k$, and $\mathcal{F}$ a quasi-coherent sheaf on $X_K$ and $\mathcal{F}'$ a quasi-coherent sheaf on $X_{K'}$, then we say that $\mathcal{F}$ and $\mathcal{F}'$ are \emph{equivalent} if there exists an extension $K''/k$ as well as $k$-homomorphisms $K\to K''$ and $K'\to K''$ such that $\mathcal{F}_{K''}$ and $\mathcal{F}'_{K''}$ are isomorphic over $X_{K''}$.
+This defines an equivalence relation, and we are interested in the equivalence classes of sheaves under this relation, and of sets of such equivalence classes.
+Note that, if $X_0$ is of finite type over $k$, then every class of coherent sheaves can be defined by a coherent sheaf on $X_K$, where $K$ is some extension of $k$ \emph{of finite type}.
+We can thus, in the definition of classes of coherent sheaves, restrict ourselves to \emph{algebraically closed} extensions of $k$, and we can also restrict ourselves to a fixed algebraically closed extension $\Omega$ of $k$, of infinite transcendence degree;
+two coherent sheaves $\mathcal{F}$ and $\mathcal{F}'$ on $X_\Omega$ are then equivalent if and only if there exists a $K$-automorphism $\sigma$ of $\Omega$ such that $\mathcal{F}\otimes_K(\Omega,\sigma)$ is isomorphic to $\mathcal{F}'$.
+Note that there is a bijective correspondence between classes of coherent sheaves under the first definition and under the second.
+
+Let $E$ and $E'$ be two sets of classes of coherent sheaves on $X$.
+Consider the classes of all sheaves of the form $\mathcal{F}\otimes\mathcal{F}'$, where $\mathcal{F}$ and $\mathcal{F}'$ are coherent sheaves on the \emph{same} $X_K$, with the class of $\mathcal{F}$ being in $E$ and the class of $\mathcal{F}'$ being in $E'$.
+We thus define a set of classes of coherent sheaves that we denote by $E\otimes E'$.
+We can similarly define $\mathcal{T}or_i(E,E')$, etc.
+Generally, to every function $\mathcal{U}$ that sends each sequence $\mathcal{F}_1,\ldots,\mathcal{F}_n$ of $n$ coherent sheaves on one single $X_K$ to a set $\mathcal{U}(\mathcal{F}_1,\ldots,\mathcal{F}_n)$ of coherent sheaves on $X_K$, and that has the evident property of compatibility with isomorphisms of sheaves and inverse images under change of base, we associate a function, denoted by the same notation $\mathcal{U}$, that sends each sequence $E_1,\ldots,E_n$ of $n$ sets of classes of coherent sheaves to a set $\mathcal{U}(E_1,\ldots,E_n)$ of classes of coherent sheaves.
+
+Our aim in this section is to give a definition of certain sets of classes of sheaves, said to be \emph{bounded}, and to show that the most standard operations $\mathcal{U}$, applied to bounded sets, give sets that are again bounded.
+
+Let $X$ be a prescheme of finite type over $S$, with $S$ \emph{Noetherian}.
+For all $s\in S$, the fibre $X_s$ is a prescheme of finite type over $k(s)$, and we will consider the classes of coherent sheaves on $X_s$, in the above sense.
+This gives meaning to the phrase "class of coherent sheaves on a fibre of $X/S$", as well as to analogous phrases.
+Similarly, proceeding separately on each fibre, we can again consider operations such as $E\otimes E'$ etc. that send systems of sets of classes of coherent sheaves on the fibres of $X/S$ to sets of classes of coherent sheaves on the fibres of $X/S$.
+
+\begin{definition}\label{fga3.iv-1-definition-1.1}
+  Let $E$ be a set of classes of coherent sheaves on the fibres of $X/S$.
+  We say that $E$ is \emph{bounded} if there exists a prescheme $S'$ of finite type over $S$, along with a coherent sheaf $\mathcal{F}'$ on $X'=X\times_S S'$, such that $E$ is contained in the set of classes of sheaves on the fibres of $X/S$ defined by $\mathcal{F}'$.
+\end{definition}
+
+
+This construction, by definition, sends $s\in S$ to the classes of sheaves $\mathcal{F}'\otimes_{S'}k(s')$, where $s'$ runs over the points of $S'$ over $s$ (so that $k(s')$ is an extension of $k(s)$, and $X\otimes (X_s)_{k(s')}$ can be identified with the fibre $X'\otimes_{S'}k(s')=X'_{s'}$ of $X'$ at $s'$).
+We can say that the bounded sets are those that are contained in an \emph{algebraic family} of coherent sheaves, parametrised by some $S'$ of finite type over $S$.
+
+A finite union of bounded sets is bounded (take the prescheme given by the sum of the parametrising preschemes $S_i$ defining the bounding algebraic families).
+A base change $T\to S$ sends a family which is bounded with respect to $X/S$ to a family which is bounded with respect to $X_T/T$, and the converse is true if $T\to S$ is surjective (or, more generally, if its image contains the $s$ which appear in the given family $E$ for $X/S$).
+This theoretically leads us to determine the bounded families only in the case where $S$ is the spectrum of an algebra of finite type over the ring of integers $\mathbb{Z}$.
+
+If $E$ and $E'$ are bounded families of classes of sheaves with respect to $X/S$, then $E\otimes E'$ is also bounded:
+indeed, if $E$ (resp. $E'$) is bounded by the algebraic families defined by $T\to S$ and $\mathcal{F}$ on $X_T$ (resp. $T'\to S$ and $\mathcal{F}'$ on $X_{T'}$), then $E\otimes E'$ is bounded by the algebraic family defined by $T''=T\times_S T'\to S$ and the sheaf $\mathcal{F}''$ on $X_{T''}$ given by the tensor product of the inverse images of $\mathcal{F}$ and $\mathcal{F}'$ on $X_{T''}$.
+This argument is correct only because the functor $\mathcal{F}\otimes\mathcal{F}'$ is right exact in both $\mathcal{F}$ and $\mathcal{F}'$, and thus commutates with base extension (and, in particular, with passing to the fibres).
+It is not applicable as-is to local operations, such as $\mathcal{T}or_i(E,E')$, $\mathcal{H}om(E,E')$, $\mathcal{E}xt^i(E,E')$.
+We can, however, show that these operations also send bounded sets to bounded sets, by proceeding as for $E\otimes E'$, but by also using results of the following type (all contained in \cite{Gro1960b}, IV 6.11]:
+a bounded family $E$ is always bounded by an algebraic family defined by a coherent sheaf $\mathcal{F}$ on some $X_T$ (with $T$ of finite type over $S$) that is \emph{flat} with respect to $T$.
+(We "cut into bits" the initial space of parameters).
+Such flatness properties on suitable sheaves indeed ensure the commutativity of operations such as $\mathcal{T}or_i(\mathcal{F},\mathcal{F}')$ with arbitrary base change.
+The same method applies to operations of a global nature:
+direct images and derived direct images of coherent sheaves under proper morphisms, global $\operatorname{Ext}$ with respect to proper morphisms (cf. \cite{GD1960}, III §6], etc.;
+all these operations send bounded families of sheaves to bounded families of sheaves (N.B. here the preschemes over which we are taking the various sheaves can change under the operations in question).
+
+The two claims that follow can be proven by \emph{essentially} the same flatness technique;
+for the primary decomposition on the fibres of a morphisms of finite type, see, in particular, \cite{GD1960}, IV.
+
+\begin{proposition}\label{fga3.iv-1-proposition-1.2}
+  Let $E$ and $E'$ be bounded sets of classes of sheaves on the fibres of $X/S$, with $X$ assumed to be proper over $S$.
+  Then
+  \begin{enumerate}[i.]
+    \item the family of kernels, cokernels, and images of homomorphisms $\mathcal{F}\to\mathcal{F}'$ (where the class of $\mathcal{F}$ is in $E$ and the class of $\mathcal{F}'$ is in $E'$) is bounded;
+    \item the family of extensions $\mathcal{F}''$ of $\mathcal{F}$ by $\mathcal{F}'$ (where the class of $\mathcal{F}$ is in $E$ and the class of $\mathcal{F}'$ is in $E'$) is bounded.
+  \end{enumerate}
+\end{proposition}
+
+\begin{cproof}
+  After potentially applying a suitable base change, we can suppose that $E$ and $E'$ are defined by coherent sheaves $\mathcal{G}$ and $\mathcal{G}'$ (respectively) on some $X_T/T$, with $T$ of finite type over $S$.
+  Further, we can suppose that certain flatness hypotheses are satisfied, implying that constructing the sheaves $f_T(\mathcal{H}om_{\mathcal{O}_{X_T}}(\mathcal{G},\mathcal{G}'))$ and $\mathcal{E}xt_{f_T}^1(\mathcal{G},\mathcal{G}')$ commutes with base change by an arbitrary morphism $T'\to T$.
+  Further, we can suppose that the coherent sheaves above are locally free on $T$.
+  So let $T_0$ and $T_1$ be the vector bundles on $T$ whose sheaves of germs of sections are (respectively) the above sheaves.
+  We can then canonically define a homomorphism $\mathcal{G}_{T_0}\to\mathcal{G}'_{T_0}$ of coherent sheaves on $X_{T_0}$, along with an extension
+  \[
+    0 \to \mathcal{G}_{T_1} \to \mathcal{G}'' \to \mathcal{G}'_{T_1} \to 0
+  \]
+  of coherent sheaves on $X_{T_1}$ that has the evident universal property.
+  This second sheaf defines an algebraic family that bounds the family in question in (ii).
+  This is also true for the kernel, cokernel, and image of the above homomorphism, and the consideration of this proves (i) (provided that we assume the cokernel to be flat with respect to $T_0$, in which case we can again reduce to cutting $T_0$ into pieces...).
+\end{cproof}
+
+\begin{proposition}\label{fga3.iv-1-proposition-1.3}
+  Let $E$ be a bounded family of classes of sheaves on the fibres of $X/S$.
+  Then the classes of the structure sheaves of the $(\operatorname{supp}\mathcal{F})_\mathrm{red}$, where $\mathcal{F}$ is a coherent sheaf on some $X_K$, with $K$ algebraically closed, and whose class is in $E$, form a bounded family.
+\end{proposition}
+
+Here, $(\operatorname{supp}\mathcal{F})_\mathrm{red}$ denotes the support of $\mathcal{F}$, endowed with the induced reduced structure, i.e. its structure sheaf is the quotient of $\mathcal{O}_{X_K}$ by the largest sheaf of ideals that defines $\operatorname{supp}\mathcal{F}$.
+We can prove the analogous result to \Cref{fga3.iv-1-proposition-1.3} for the sheaves canonically induced from $\mathcal{F}$ by the theory of primary decomposition;
+for example, the $\mathcal{F}/\mathcal{F}_i$, where the $\mathcal{F}_i$ are the primary subsheaves of $\mathcal{F}$ for the components of the support of $\mathcal{F}$, and minimal with respect to this property;
+or the $\mathcal{O}_{X_K}/\mathfrak{p}$, where $\mathfrak{p}$ is a prime sheaf of ideals associated to $\mathcal{F}$, or the $\mathcal{O}_{X_K}/\mathfrak{q}$, where $\mathfrak{q}$ is a primary sheaf of ideals associated to a component of the support of $\mathcal{F}$ (the reference field being algebraically closed).

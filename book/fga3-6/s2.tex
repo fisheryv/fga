@@ -1,0 +1,171 @@
+% !TeX root = ../../fga.tex
+\section{Application to the local properties of Picard schemes}\label{fga3.vi-2}
+
+\begin{theorem}\label{fga3.vi-2-theorem-2.1}
+    ~
+    \begin{enumerate}[i.]
+        \item Let $f\colon X\to S$ be a proper and simple morphism, and suppose that $\underline{\operatorname{Pic}}_{X/S}$ exists (for example, if $f$ is projective).
+              Then $\underline{\operatorname{Pic}}_{X/S}$ is separated over $S$, and, for every closed subset $Z$ of $\underline{\operatorname{Pic}}_{X/S}$ that is of finite type over $S$, we have that $Z$ is proper over $S$.
+        \item Let $X$ be a prescheme over a field $k$ that is proper and geometrically normal.
+              Then $\underline{\operatorname{Pic}}_{X/S}^0$ is proper over $k$.
+    \end{enumerate}
+\end{theorem}
+
+
+\begin{cproof}
+    For (i), with the valuative criterion of \cite{GD1960}, II, §7 it suffices to prove the following: if $S$ is the spectrum of a complete discrete valuation ring, and $U$ the open consisting of the generic point of $S$, then every rational section of $\underline{\operatorname{Pic}}_{X/S}$ over $S$, i.e. every section over $U$, extends uniquely to a section over $S$.
+    Taking into account the definition of $\underline{\operatorname{Pic}}_{X/S}$, this is equivalent to the following statement: for every invertible module $\mathcal{L}$ on $V=f^{-1}(U)$, there exists an invertible module on $X$ that extends $\mathcal{L}$, unique up to isomorphism.
+    But this follows easily from the description of invertible modules on $V$ (resp. on $X$) in terms of the classes of "Cartier" divisors, taking into account the fact that the local rings of $X$ are regular (since $X$ is simple over $S$, which is regular), and thus factorial, by Auslander, which implies that every divisor on $S$ is a Cartier divisor.
+    Indeed, every divisor on $V$ can be extended to a divisor on $X$ by taking its "closure".
+
+    For (ii), using Chow's lemma we can reduce to the case where $X$ is projective, and thus embedded into some $\mathbb{P}_k^n$;
+    we can also assume that $X$ is connected.
+    If $\dim X=1$, then $X$ is simple over $k$, and we can apply (i).
+    If $\dim X\geqslant2$, then we can use a variant of the known "equivalence criteria", which implies that there exists a finite number of curves $Y_i$, simple over $X$ (obtained as intersections of $X$ with suitable linear subspaces of $\mathbb{P}_k^n$), such that $\underline{\operatorname{Pic}}_{X/k}^\tau\to\prod_i\underline{\operatorname{Pic}}_{Y_i/k}^\tau$ is a monomorphism, and induces a fortiori a monomorphism for the connected components.
+    Since the codomain is proper over $k$ by the above, and since we are talking about a homomorphism of group schemes, which is necessarily a closed immersion, it follows that $\underline{\operatorname{Pic}}_{X/k}^0$ is also proper over $k$.
+    We can avoid recourse to delicate equivalence criteria by using the structure of commutative algebraic groups over an algebraically closed field (thanks to Chevalley–Borel);
+    we are then reduced to proving that every morphism from the affine line with the origin removed into $\underline{\operatorname{Pic}}_{X/S}^\tau$ is constant, which is equivalent to saying that every invertible module on $X[t,t^{-1}]$ comes from an invertible module on $X$, which is a result that is well known and elementary and does not even use the fact that $X$ is proper over $k$ (the hypothesis that $X$ is normal allowing us to immediately reduce to the case where $X$ is regular).
+\end{cproof}
+
+\begin{remark}\label{fga3.vi-2-remark-2.2}
+    The above proof of (i) holds true even if we only suppose that $f$ is flat and that its fibres $X_s$ are locally complete intersections and simple over $k(s)$ in codimension $\leqslant2$, taking into account the following fact which is proven in \cite{Gro1960b}: a Noetherian complete intersection local ring that is regular in codimension $\leqslant3$ is factorial ("Samuel's conjecture").
+    We note that the result becomes false if we replace "codimension $\leqslant2$" by "codimension $\leqslant1$", i.e. by the hypothesis "normal", as we can convince ourself by considering the example of a family of non-singular quadratics that degenerate to a quadratic cone.
+\end{remark}
+
+\begin{corollary}\label{fga3.vi-2-corollary-2.3}
+    Let $f\colon X\to S$ be a proper and normal morphism (i.e. flat with normal geometric fibres), and suppose that $\underline{\operatorname{Pic}}_{X/S}$ exists.
+    Then $\underline{\operatorname{Pic}}_{X/S}^0$ is proper over $S$, thus closed in $\underline{\operatorname{Pic}}_{X/S}$;
+    furthermore, $\underline{\operatorname{Pic}}_{X/S}^\tau$ and $\underline{\operatorname{Pic}}_{X/S}^0$ are both closed, as is $\underline{\operatorname{Pic}}_{X/S}^\sigma$ in "equal characteristic".
+\end{corollary}
+
+\begin{cproof}
+    We apply \Cref{fga3.vi-1-theorem-1.1} and (ii) of \Cref{fga3.vi-2-theorem-2.1}.
+\end{cproof}
+
+\begin{corollary}\label{fga3.vi-2-corollary-2.4}
+    Let $f\colon X\to S$ be a proper and simple morphism such that $\underline{\operatorname{Pic}}_{X/S}$ exists and is the sum of the schemes $P^{(i)}$ of finite type over $S$ (cf. FGA 3.V, Proposition 4.1 \Cref{fga3.v-4-proposition-4.1}).
+    Then each $P^{(i)}$ is proper over $S$.
+\end{corollary}
+
+\begin{cproof}
+    This follows from (i) of \Cref{fga3.vi-2-theorem-2.1}.
+\end{cproof}
+
+
+As we noted in \Cref{fga3.vi-2-remark-2.2}, the above result can be generalised by making less restrictive hypotheses on the fibres of $f$, but becomes false if we only suppose $f$ to be normal.
+In this case, I do not know if $\underline{\operatorname{Pic}}_{X/S}^\tau$ is nevertheless proper over $S$, even if assuming it to be of finite type over $S$.
+
+
+\begin{theorem}\label{fga3.vi-2-theorem-2.5}
+    Let $f\colon X\to S$ be a proper and flat morphism such that $\underline{\operatorname{Pic}}_{X/S}$ exists, and, for each integer $n$, let $\varphi_n$ be the $n$-th power homomorphism in this group prescheme.
+    Then $\varphi_n$ is étale at all points $x\in X$ of residual characteristic coprime to $n$.
+\end{theorem}
+
+
+By the infinitesimal characterisation of étale morphisms, the above claim is equivalent to the following:
+
+
+\begin{lemma}\label{fga3.vi-2-lemma-2.6}
+    Suppose that $S$ is the spectrum of an Artinian local ring $A$ whose maximal ideal $\mathfrak{m}$ is $(\nu+1)$-th power null, and let $A_{\nu-1}=A/\mathfrak{m}^\nu$ and $X_{\nu-1}=X\otimes_A A_{\nu=1}$.
+    Let $\mathcal{L}$ be an invertible module on $X$, and $\mathcal{L}'_{\nu-1}$ an invertible module on $X_{\nu-1}$ whose $n$-th tensor power is isomorphic to $\mathcal{L}_{\nu-1}=\mathcal{L}\otimes_A A_{\nu-1}$.
+    Then there exists an invertible module $\mathcal{L}'$ on $X$ whose $n$-th tensor power is isomorphic to $\mathcal{L}$ (if $n$ is coprime to the residual characteristic of $k=k(\mathcal{L})$).
+\end{lemma}
+
+\begin{cproof}
+    Set $V=\mathfrak{m}^\nu=\mathfrak{m}^{\nu}/\mathfrak{m}^{\nu+1}$, which is a vector space over $k=k(A)$.
+    We start by extending $\mathcal{L}'_{\nu-1}$ to an arbitrary invertible module over $\mathcal{L}'$ on $X$.
+    The obstruction to doing this is found in $\operatorname{H}^2(X_0,\mathcal{O}_{X_0})\otimes_k V$, but by the hypothesis on $\mathcal{L}'_{\nu-1}$ and the fact that $\mathcal{L}_{\nu-1}$ can be extended, we see that the product of this obstruction with $n$ is zero, and so the obstruction itself must be zero since $n$ is coprime to the characteristic.
+    The arbitrariness of the extension is found in $\operatorname{H}^1(X_0,\mathcal{O}_{X_0})\otimes_k V$, and the deviation $\xi$ of ${\mathcal{L}'}^{\otimes n}$ from $\mathcal{L}$ is found in the same module;
+    if we try to correct $\mathcal{L}'$ in such a way as to render this deviation zero, then we are led to finding some $\eta$ in the aforementioned module such that $n\eta=\xi$.
+    But this is again possible thanks to the fact that $n$ is coprime to the characteristic.
+\end{cproof}
+
+\begin{corollary}\label{fga3.vi-2-corollary}
+    Under the conditions of \Cref{fga3.vi-2-theorem-2.5}, suppose further that the Picard schemes of the fibres $X_s$ do not contain any additive component (for example, if the $X_s$ are geometrically normal, cf. (ii) of \Cref{fga3.vi-2-theorem-2.1}).
+    Then $\underline{\operatorname{Pic}}_{X/S}\to S$ is universally open at the points of $\underline{\operatorname{Pic}}_{X/S}^\sigma$.
+    If $\underline{\operatorname{Pic}}_{X/S}^0$ is closed (for example, if the $X_s$ are geometrically normal, cf. \Cref{fga3.vi-2-corollary-2.3}), then $\underline{\operatorname{Pic}}_{X/S}^\sigma$ is itself universally open over $S$.
+    Finally, in the case of equal characteristic, $\underline{\operatorname{Pic}}_{X/S}^\rho\to S$ is universally open.
+\end{corollary}
+
+\begin{cproof}
+    We apply \Cref{fga3.vi-1-corollary-1.5} and \Cref{fga3.vi-1-theorem-1.1}.
+\end{cproof}
+
+\begin{corollary}\label{fga3.vi-2-corollary-2.7}
+    Let $f\colon X\to Y$ be a proper and flat morphism such that $\underline{\operatorname{Pic}}_{X/S}$ exists.
+    Then the function $s\mapsto\dim\underline{\operatorname{Pic}}_{X_s/k(s)}$ on $S$ is upper semi-continuous (i.e. it can jump upwards, but not downwards), and it is even continuous (i.e. locally constant) if the $\underline{\operatorname{Pic}}_{X_s/k(s)}$ do not contain any additive component.
+\end{corollary}
+
+\begin{cproof}
+    The first claim is trivially true, or almost so, for every group prescheme locally of finite type over a locally Noetherian base, since it suffices to look along the identity section.
+    The second claim follows from \Cref{fga3.vi-2-theorem-2.5}.
+\end{cproof}
+
+\begin{remark}\label{fga3.vi-2-remark-2.8}
+    Let $s,s'\in S$ be such that $s$ is a specialisation of $s'$.
+    Then \Cref{fga3.vi-2-corollary-2.7} is equivalent to an inequality (resp. equality) between the dimensions of the Picard schemes of $X_{s'}$ and of its "specialisation" $X_s$.
+    Serre noted, even before the construction of Picard schemes, that the invariance of the dimensions of the Picard varieties of the $X_s$ in the case of a \emph{simple} morphism $f\colon X\to S$ was a formal consequence of the theory of specialisation of the fundamental group (\cite{Gro1960b}, X), classical relations à la Kummer between the points of finite order on the Picard variety, and the abelianisation of the fundamental group (\cite{Gro1960b}, XI).
+    If we denote by $\alpha$, $\mu$, and $\lambda$ the dimensions of the abelian, multiplicative, and additive parts (respectively) of $\underline{\operatorname{Pic}}_{X_s/k(s)}$, and we similarly define $\alpha'$, $\mu'$, and $\lambda'$, then the known relations can be expressed as the following inequalities:
+
+    \begin{equation}\tag{*}\label{fga3.vi-2-equation-star}
+        \alpha+\mu+\lambda
+        \geqslant \alpha'+\mu'+\lambda'
+    \end{equation}
+
+    (satisfied provided that $\underline{\operatorname{Pic}}_{X/S}$ exists, and thus probably in all cases), and this inequality, for $\lambda=\lambda'=0$, reduces to an equality, satisfied under the same existence hypotheses:
+    \[
+        \alpha+\mu = \alpha'+\mu'.
+    \]
+    We also have
+
+    \begin{equation}\tag{**}\label{fga3.vi-2-equation-star-star}
+        2\alpha+\mu \leqslant 2\alpha'+\mu'
+    \end{equation}
+
+    by the argument of Serre, if the $X_s$ are separable (without even supposing the existence of $\underline{\operatorname{Pic}}_{X/S}^\tau$), or if the ${}_n\underline{\operatorname{Pic}}_{X/S}$ (kernels of the $\varphi_n$ into the Picard functor) are \emph{separated} over $S$ (taking into account the fact that they are étale over $S$, thanks to \Cref{fga3.vi-2-theorem-2.5}).
+    We are inclined to conjecture that \Cref{fga3.vi-2-equation-star} is an equality in all cases, or at least if the $X_s$ are separable, and also that we have inequalities
+
+    \begin{equation}\tag{***}\label{fga3.vi-2-equation-star-star-star}
+        \begin{aligned}
+            \alpha  & \leqslant \alpha'  \\
+            \lambda & \geqslant \lambda'
+        \end{aligned}
+    \end{equation}
+
+    which should be satisfied whenever we have a group prescheme that is locally of finite type over locally Noetherian $S$, in which the dimension of the fibres is constant (see \Cref{fga3.vi-1-lemma-1.3} for a positive result in this direction).
+\end{remark}
+
+\begin{remark}\label{fga3.vi-2-remark-2.9}
+    In all known cases, $\underline{\operatorname{Pic}}_{X/S}^\tau$ is universally open over $S$, but we should probably not have excessive illusions, even if $f\colon X\to S$ is simple;
+    in any case, Mumford has constructed an example (it is true with $S$ non-reduced, in fact with $S$ the spectrum of an Artinian ring) where $\underline{\operatorname{Pic}}_{X/S}^\tau$ is not flat over $S$, by infinitesimally varying the Igusa surface.
+    The point envisaged by Mumford can also be found in $\underline{\operatorname{Pic}}_{X/S}^\rho$, and it remains possible (for $f\colon X\to S$ simple) that $\underline{\operatorname{Pic}}_{X/S}$ is flat over $S$ at the points of $\underline{\operatorname{Pic}}_{X/S}^\sigma$;
+    the speaker doubts, however, that this is always the case, even when restricting to the points of $\underline{\operatorname{Pic}}_{X/S}^0$ and supposing $S$ to be the spectrum of a discrete valuation ring.
+    The question is linked to the study of fixed points of an abelian scheme under a finite automorphism group, a situation for which we seem to lack examples.
+    It seems that even by restricting to simple and projective $f\colon X\to S$, the results of local regularity on $\underline{\operatorname{Pic}}_{X/S}$ stated in the present section, and the conjectures raised in \Cref{fga3.vi-2-remark-2.8}, basically exhaust what can be said on this subject without more particular hypotheses on the nature of the fibres of $f$.
+    We recall, however, that, if the geometric fibres of $\underline{\operatorname{Pic}}_{X/S}$ are \emph{reduced} and have no additive component, then it follows from \Cref{fga3.vi-1-corollary-1.8} and \Cref{fga3.vi-2-theorem-2.5} that $\underline{\operatorname{Pic}}_{X/S}$ is simple over $S$ at the points of $\underline{\operatorname{Pic}}_{X/S}^\sigma$ whenever $S$ is reduced;
+    this result still holds even, if $f\colon X\to S$ is normal, without any hypothesis on $S$, and we will see in \Cref{fga3.vi-3-theorem-3.5}.
+    On this note, we point out:
+\end{remark}
+
+\begin{proposition}\label{fga3.vi-2-proposition-2.10}
+    ~
+    \begin{enumerate}[i.]
+        \item If $\underline{\operatorname{Pic}}_{X/S}$ is simple (resp. flat) over $S$ at the points of the identity section, then it is simple (resp. flat) at all points of $\underline{\operatorname{Pic}}_{X/S}^\sigma$, and at the points of every section of $\underline{\operatorname{Pic}}_{X/S}$ over $S$.
+        \item Let $s\in S$ be such that $\operatorname{H}^2(X_s,\mathcal{O}_{X_s})=0$.
+              Then there exists an open neighbourhood $U$ of $s$ such that $\underline{\operatorname{Pic}}_{X/S}|U$ is simple over $U$.
+        \item Let $X$ be a proper scheme over a field.
+              Then we have
+              \[
+                  \dim\underline{\operatorname{Pic}}_{X/k}
+                  \leqslant \dim\operatorname{H}^1(X,\mathcal{O}_X)
+              \]
+              with equality if and only if $\underline{\operatorname{Pic}}_{X/k}$ is simple over $k$;
+              this is always the case if $k$ is of characteristic $0$.
+    \end{enumerate}
+\end{proposition}
+
+\begin{cproof}
+    Claim (i) follows from \Cref{fga3.vi-2-theorem-2.5} and \Cref{fga3.vi-1-corollary-1.12}, and (ii) follows from the infinitesimal criterion for simple morphisms and a well-known obstruction calculation, taking into account the fact that (by the "semi-continuous theorem") the hypothesis made on $s$ will still hold true for neighbouring points.
+    Finally, (iii) follows from the fact that $\operatorname{H}^1(X,\mathcal{O}_X)$ is isomorphic to the Zariski tangent space at the identity element of $\underline{\operatorname{Pic}}_{X/k}$;
+    the last claim is a particular case of a theorem of Cartier, saying that a "formal group" in characteristic $0$ is formally simple over $k$.
+\end{cproof}
