@@ -47,9 +47,9 @@ Setting $\mathcal{F}=\mathcal{O}_S$ in (i), we obtain:
     Let $\mathcal{G}$ be a quasi-coherent sheaf on $S$, with $\mathcal{G}'$ and $\mathcal{G}''$ denoting its inverse images on $S'$ and $S''=S'\times_S S'$ (respectively), and let $p_1$ and $p_2$ be the two projections from $S''$ to $S$.
     Then the diagram of maps of sets
     \[
-        \operatorname{G_a}mma(\mathcal{G}) \xrightarrow{\alpha^*}
-        \operatorname{G_a}mma(\mathcal{G}') \overset{p_1^*}{\underset{p_2^*}{\rightrightarrows}}
-        \operatorname{G_a}mma(\mathcal{G}'')
+        \operatorname{\Gamma}(\mathcal{G}) \xrightarrow{\alpha^*}
+        \operatorname{\Gamma}(\mathcal{G}') \overset{p_1^*}{\underset{p_2^*}{\rightrightarrows}}
+        \operatorname{\Gamma}(\mathcal{G}'')
     \]
     is \emph{exact} (cf. \Cref{fga3.i-a.1-definition-1.1}).
 \end{corollary}
@@ -246,10 +246,10 @@ and a descent data on $X'$ is equivalent to the data of a sheaf homomorphism
 that is compatible with the morphism $h\colon X'\to S'$ and that satisfies the conditions analogous to \Cref{fga3.i-b.3-equation-3.1}, \Cref{fga3.i-b.3-equation-3.2}, \Cref{fga3.i-b.3-equation-3.3}, and \Cref{fga3.i-b.3-equation-3.4} above.
 
 \begin{example}[Weil's example]\label{fga3.i-b.3-example-1}
-    Suppose that $S'/S$ is a \emph{Galois étale covering} with Galois group $\operatorname{G_a}mma$ (cf. \Cref{fga3.i-a.3} and \Cref{fga3.i-a.4}).
-    Then a descent data on a quasi-coherent sheaf $\mathcal{F}'$ on $S'$ (resp. on an $S'$-prescheme $X'$) is equivalent to the data of a representation of $\operatorname{G_a}mma$ by automorphisms of $(S',\mathcal{F}')$ (resp. of $(S',X')$) that is compatible with the action of $\operatorname{G_a}mma$ on $S'$.
+    Suppose that $S'/S$ is a \emph{Galois étale covering} with Galois group $\operatorname{\Gamma}$ (cf. \Cref{fga3.i-a.3} and \Cref{fga3.i-a.4}).
+    Then a descent data on a quasi-coherent sheaf $\mathcal{F}'$ on $S'$ (resp. on an $S'$-prescheme $X'$) is equivalent to the data of a representation of $\operatorname{\Gamma}$ by automorphisms of $(S',\mathcal{F}')$ (resp. of $(S',X')$) that is compatible with the action of $\operatorname{\Gamma}$ on $S'$.
     This result is "formal", i.e. it can be proven in terms of categories, but, from the point of view of this section, we also obtain the explicit structure of $\mathcal{U}$ (endowed with its ring structure, the ring homomorphism $\mathcal{A}'\to\mathcal{U}$, and the diagonal map), which is completely known thanks to the following result:
-    \emph{$\mathcal{U}$ admits, as a left $A'$-module, a basis given by the sections of $\mathcal{U}$ that correspond to elements of $\operatorname{G_a}mma$}.
+    \emph{$\mathcal{U}$ admits, as a left $A'$-module, a basis given by the sections of $\mathcal{U}$ that correspond to elements of $\operatorname{\Gamma}$}.
 \end{example}
 
 \begin{example}[Cartier's example]\label{fga3.i-b.3-example-2}
@@ -324,7 +324,7 @@ Since these properties remain true under flat extensions $\alpha\colon S'\to S$ 
 Considering this principle in the case where $\alpha\colon S'\to S$ is as in \Cref{fga3.i-b.3-example-1} and \Cref{fga3.i-b.3-example-2} in the previous section, we recover the \emph{rationality criteria of Weil and of Cartier}.
 (We note that the authors restrict to the case where $S$ and $S'$ are spectra of fields;
 a fortiori, $S$ is then the spectrum of a local ring, and the equivalence relation introduced above is exactly the relation of being isomorphic).
-The the first case, $\mathcal{F}'$ is rational on $S$ if and only if its images under $\operatorname{G_a}mma$ are all equivalent to $\mathcal{F}'$.
+The the first case, $\mathcal{F}'$ is rational on $S$ if and only if its images under $\operatorname{\Gamma}$ are all equivalent to $\mathcal{F}'$.
 To express the rationality criterion in the second case, we consider, more generally, the diagonal morphism $X'\to X''=X'\times_X X'$ of $X'/X$, with the corresponding sheaf of ideals $\mathcal{I}$ on $X'\times_X X'$, and the sheaf $\mathcal{I}/\mathcal{I}^2$, which can be identified with its inverse image $\Omega_{X'/X}^1$ on $X$ (the \emph{sheaf of $1$-differentials of $X'$ with respect to $X$}).
 Since the restrictions of the $\mathcal{F}''_i=p_i(\mathcal{F}')$ (for $i=1,2$) to the diagonal are isomorphic (since they are both isomorphic to $\mathcal{F}'$), i.e. $\mathcal{F}''_1(\mathcal{F}''_2)^{-1}=\mathcal{F}''$ has a restriction to the diagonal which is trivial, it follows that the restriction of $\mathcal{F}''$ to $(X'',\mathcal{O}_{X''}/\mathcal{I}^2)$ is given, up to isomorphism, by a well-defined element $\xi$ of
 \[
@@ -412,10 +412,10 @@ We thus conclude, in particular:
 
 By known arguments, we thus conclude the same result for others structure groups such as $\operatorname{SL}(n)_S$, $\operatorname{Sp}(n)_S$, and products of such groups.
 We thus also conclude that, if $F$ is a closed subgroup of $G=\operatorname{GL}(n)_S$ that is flat over $S$, and such that the quotient $G/F$ exists, and such that $G$ is an isotrivial (resp. strictly isotrivial) principal homogeneous bundle on $G/F$, of structure group $F\times_S(G/F)$, then \emph{every} principal homogeneous bundle of structure group $F$ is isotrivial (resp. strictly isotrivial).
-This applies to all the "linear groups" on $S$ that have been used up until now, and, in particular, to the case where $G=S\times_k\operatorname{G_a}mma$, with $S$ a prescheme over the field $k$, and $\operatorname{G_a}mma$ a linear group (in the classical sense) over $k$ (and thus in particular simple).
+This applies to all the "linear groups" on $S$ that have been used up until now, and, in particular, to the case where $G=S\times_k\operatorname{\Gamma}$, with $S$ a prescheme over the field $k$, and $\operatorname{\Gamma}$ a linear group (in the classical sense) over $k$ (and thus in particular simple).
 This thus answers, for such groups, a question of Serre (\emph{loc. cit.}).
 
-We also point out that, for most groups (linear or not) that are simple over $S$ that we know of, and certainly for all those of the form $S\times_k\operatorname{G_a}mma$ as above, we can show that every isotrivial principal homogeneous bundle is strictly isotrivial, which answers, in particular, another question of Serre (\emph{loc. cit.} pp.1–14), taking into account the fact that a homogeneous principal bundle obtained by a descent \emph{à la} Cartier (cf. \Cref{fga3.i-b.3-example-2}) is obviously isotrivial.
+We also point out that, for most groups (linear or not) that are simple over $S$ that we know of, and certainly for all those of the form $S\times_k\operatorname{\Gamma}$ as above, we can show that every isotrivial principal homogeneous bundle is strictly isotrivial, which answers, in particular, another question of Serre (\emph{loc. cit.} pp.1–14), taking into account the fact that a homogeneous principal bundle obtained by a descent \emph{à la} Cartier (cf. \Cref{fga3.i-b.3-example-2}) is obviously isotrivial.
 
 \begin{remark}\label{fga3.i-b.6-remark}
     One of the essential difficulties in these questions (setting aside the question of the existence of quotient schemes) is the lack of effectiveness criteria for a descent data along a faithfully flat \emph{non-finite} morphism.
